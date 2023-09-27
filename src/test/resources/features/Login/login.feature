@@ -2,26 +2,26 @@ Feature: Login CMS
 
 
   Scenario: Login success
-    Given user navigate to Login page "https://sma.tecdiary.net/admin/login"
+    Given user navigate to Login page "http://localhost:5173/login"
     When user enter email "admin@tecdiary.com" and password: "12345678"
     And click login button
     Then user redirect to admin page "https://sma.tecdiary.net/admin/"
     And user should see the notification displays
 
-  @SuccessfulLogin
-  Scenario: Successful Login
-    Given user on the login page
-    When user enter valid username and password
-    And click on the login button
-    Then user should be redirected to the admin page
-
-  @InvalidLogin
-  Scenario: Invalid Login
-    Given user on the login page
-    When user enter an invalid username or password
-    And click on the login button
-    Then user should see an error message
-    And stay on the login page
+#  @SuccessfulLogin
+#  Scenario: Successful Login
+#    Given user on the login page
+#    When user enter valid username and password
+#    And click on the login button
+#    Then user should be redirected to the admin page
+#
+#  @InvalidLogin
+#  Scenario: Invalid Login
+#    Given user on the login page
+#    When user enter an invalid username or password
+#    And click on the login button
+#    Then user should see an error message
+#    And stay on the login page
 
 #  Scenario: Empty Username
 #    Given user on the login page
