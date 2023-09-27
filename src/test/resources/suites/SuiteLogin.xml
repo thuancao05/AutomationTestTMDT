@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Run Gherkin">
+        <classes>
+            <class name="runners.RunnerTC_01"/>
+            <class name="runners.RunnerTC_02"/>
+            <class name="runners.RunnerTC_03"/>
+            <class name="runners.RunnerTC_04"/>
+            <class name="runners.RunnerTC_05"/>
+            <class name="runners.RunnerTC_06"/>
+            <class name="runners.RunnerTC_07"/>
+            <class name="runners.RunnerTC_08"/>
+            <class name="runners.RunnerTC_09"/>
+            <class name="runners.RunnerTC_10"/>
+        </classes>
+    </test>
+</suite>
