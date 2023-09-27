@@ -39,7 +39,7 @@ public class DriverFactory {
         System.out.println("Launching Chrome browser...");
         WebDriverManager.chromedriver().setup();
 
-        ChromeOptions options = new ChromeOptions();
+//        ChromeOptions options = new ChromeOptions();
 //        options.setHeadless(ConstantGlobal.HEADLESS);
 //        options.addArguments("--remote-allow-origins=*");
 

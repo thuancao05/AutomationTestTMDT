@@ -38,7 +38,6 @@ public class common_function   {
         WebElement element = getWebElement(by);
         element.clear();
         element.sendKeys(text);
-
     }
 
     public void press(Keys key) {
@@ -66,7 +65,6 @@ public class common_function   {
         return element.getAttribute(attr);
     }
 
-
     public boolean verifyTitlePage(String titlePage) {
         return getTitlePage().contains(titlePage);
     }
@@ -75,6 +73,12 @@ public class common_function   {
         WebElement select = getWait().until(ExpectedConditions.visibilityOfElementLocated(element));
         Select selectOption = new Select(select);
         selectOption.selectByValue(value);
+    }
+
+    public String getValue(By by){
+        WebElement element = DriverManager.getDriver().findElement(by);
+        JavascriptExecutor executor = (JavascriptExecutor) getDriver();
+        return element.getText();
     }
 
     //xoa attribute trong phan tu
