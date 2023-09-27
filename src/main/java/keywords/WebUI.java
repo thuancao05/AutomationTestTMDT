@@ -5,6 +5,8 @@ import constants.ConstantGlobal;
 import driver.DriverManager;
 import helpers.PropertiesHelpers;
 import helpers.SystemHelpers;
+import helpers.CaptureHelpers;
+
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
