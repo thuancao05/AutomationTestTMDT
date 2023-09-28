@@ -7,7 +7,6 @@ import helpers.PropertiesHelpers;
 import helpers.SystemHelpers;
 import helpers.CaptureHelpers;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -55,118 +54,118 @@ public class WebUI {
         return DriverManager.getDriver().findElements(by);
     }
 
-    @Step("Verify Equals: {0} and {1}")
-    public static void verifyEquals(Object actual, Object expected) {
-        waitForPageLoaded();
-        sleep(STEP_TIME);
-        LogUtils.info("Verify equals: " + actual + " and " + expected);
-        ExtentTestManager.logMessage(Status.PASS, "Verify equals: " + actual + " and " + expected);
-        Assert.assertEquals(actual, expected, "Fail. Not match. '" + actual.toString() + "' != '" + expected.toString() + "'");
-    }
-
-    @Step("Verify Equals: {0} and {1}")
-    public static void verifyEquals(Object actual, Object expected, String message) {
-        waitForPageLoaded();
-        sleep(STEP_TIME);
-        LogUtils.info("Verify equals: " + actual + " and " + expected);
-        ExtentTestManager.logMessage(Status.PASS, "Verify equals: " + actual + " and " + expected);
-        Assert.assertEquals(actual, expected, message);
-    }
-
-    @Step("Check element existing {0}")
-    public static Boolean checkElementExist(By by) {
-        waitForPageLoaded();
-        waitForElementVisible(by);
-        List<WebElement> listElement = getWebElements(by);
-
-        if (listElement.size() > 0) {
-            LogUtils.info("Check Element Exist: " + true + " --- " + by);
-            return true;
-        } else {
-            LogUtils.info("Check Element Exist: " + false + " --- " + by);
-            return false;
-        }
-    }
-
-    @Step("Open URL: {0}")
+//    @Step("Verify Equals: {0} and {1}")
+//    public static void verifyEquals(Object actual, Object expected) {
+//        waitForPageLoaded();
+//        sleep(STEP_TIME);
+//        LogUtils.info("Verify equals: " + actual + " and " + expected);
+//        ExtentTestManager.logMessage(Status.PASS, "Verify equals: " + actual + " and " + expected);
+//        Assert.assertEquals(actual, expected, "Fail. Not match. '" + actual.toString() + "' != '" + expected.toString() + "'");
+//    }
+//
+//    @Step("Verify Equals: {0} and {1}")
+//    public static void verifyEquals(Object actual, Object expected, String message) {
+//        waitForPageLoaded();
+//        sleep(STEP_TIME);
+//        LogUtils.info("Verify equals: " + actual + " and " + expected);
+//        ExtentTestManager.logMessage(Status.PASS, "Verify equals: " + actual + " and " + expected);
+//        Assert.assertEquals(actual, expected, message);
+//    }
+//
+//    @Step("Check element existing {0}")
+//    public static Boolean checkElementExist(By by) {
+//        waitForPageLoaded();
+//        waitForElementVisible(by);
+//        List<WebElement> listElement = getWebElements(by);
+//
+//        if (listElement.size() > 0) {
+//            LogUtils.info("Check Element Exist: " + true + " --- " + by);
+//            return true;
+//        } else {
+//            LogUtils.info("Check Element Exist: " + false + " --- " + by);
+//            return false;
+//        }
+//    }
+//
+//    @Step("Open URL: {0}")
     public static void openURL(String url) {
         DriverManager.getDriver().get(url);
         sleep(STEP_TIME);
-        LogUtils.info("Open URL: " + url);
+//        LogUtils.info("Open URL: " + url);
 //        ExtentTestManager.logMessage(Status.PASS, "Open URL: " + url);
 //        AllureManager.saveTextLog("Open URL: " + url);
         waitForPageLoaded();
-        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
-            CaptureHelpers.takeScreenshot("openURL_" + SystemHelpers.makeSlug(url));
-        }
+//        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
+//            CaptureHelpers.takeScreenshot("openURL_" + SystemHelpers.makeSlug(url));
+//        }
     }
-
-    @Step("Click element {0}")
-    public static void clickElement(By by) {
-        waitForPageLoaded();
-        waitForElementVisible(by);
-        sleep(STEP_TIME);
-        getWebElement(by).click();
-        LogUtils.info("Click element " + by);
+//
+//    @Step("Click element {0}")
+//    public static void clickElement(By by) {
+//        waitForPageLoaded();
+//        waitForElementVisible(by);
+//        sleep(STEP_TIME);
+//        getWebElement(by).click();
+//        LogUtils.info("Click element " + by);
+////        ExtentTestManager.logMessage(Status.PASS, "Click element " + by);
+//
+//        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
+//            CaptureHelpers.takeScreenshot("clickElement_" + SystemHelpers.makeSlug(by.toString()));
+//        }
+//    }
+//
+//    @Step("Click element {0} with timeout {1}")
+//    public static void clickElement(By by, int timeout) {
+//        waitForPageLoaded();
+//        waitForElementVisible(by, timeout);
+//        sleep(STEP_TIME);
+//        getWebElement(by).click();
+//        LogUtils.info("Click element " + by);
 //        ExtentTestManager.logMessage(Status.PASS, "Click element " + by);
-
-        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
-            CaptureHelpers.takeScreenshot("clickElement_" + SystemHelpers.makeSlug(by.toString()));
-        }
-    }
-
-    @Step("Click element {0} with timeout {1}")
-    public static void clickElement(By by, int timeout) {
-        waitForPageLoaded();
-        waitForElementVisible(by, timeout);
-        sleep(STEP_TIME);
-        getWebElement(by).click();
-        LogUtils.info("Click element " + by);
-        ExtentTestManager.logMessage(Status.PASS, "Click element " + by);
-
-        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
-            CaptureHelpers.takeScreenshot("clickElement_" + SystemHelpers.makeSlug(by.toString()));
-        }
-    }
-
-    @Step("Set text {1} on {0}")
-    public static void setText(By by, String value) {
-        waitForPageLoaded();
-        waitForElementVisible(by);
-        sleep(STEP_TIME);
-        getWebElement(by).sendKeys(value);
-        LogUtils.info("Set text: " + value + " on element " + by);
+//
+//        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
+//            CaptureHelpers.takeScreenshot("clickElement_" + SystemHelpers.makeSlug(by.toString()));
+//        }
+//    }
+//
+//    @Step("Set text {1} on {0}")
+//    public static void setText(By by, String value) {
+//        waitForPageLoaded();
+//        waitForElementVisible(by);
+//        sleep(STEP_TIME);
+//        getWebElement(by).sendKeys(value);
+//        LogUtils.info("Set text: " + value + " on element " + by);
+////        ExtentTestManager.logMessage(Status.PASS, "Set text: " + value + " on element " + by);
+//
+//        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
+//            CaptureHelpers.takeScreenshot("setText_" + SystemHelpers.makeSlug(by.toString()));
+//        }
+//    }
+//
+//    @Step("Set text {1} on {0} and press key {2}")
+//    public static void setTextAndKey(By by, String value, Keys key) {
+//        waitForPageLoaded();
+//        waitForElementVisible(by);
+//        sleep(STEP_TIME);
+//        getWebElement(by).sendKeys(value, key);
+//        LogUtils.info("Set text: " + value + " on element " + by);
 //        ExtentTestManager.logMessage(Status.PASS, "Set text: " + value + " on element " + by);
-
-        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
-            CaptureHelpers.takeScreenshot("setText_" + SystemHelpers.makeSlug(by.toString()));
-        }
-    }
-
-    @Step("Set text {1} on {0} and press key {2}")
-    public static void setTextAndKey(By by, String value, Keys key) {
-        waitForPageLoaded();
-        waitForElementVisible(by);
-        sleep(STEP_TIME);
-        getWebElement(by).sendKeys(value, key);
-        LogUtils.info("Set text: " + value + " on element " + by);
-        ExtentTestManager.logMessage(Status.PASS, "Set text: " + value + " on element " + by);
-
-        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
-            CaptureHelpers.takeScreenshot("setText_" + SystemHelpers.makeSlug(by.toString()));
-        }
-    }
-
-    @Step("Get text of element {0}")
-    public static String getElementText(By by) {
-        waitForPageLoaded();
-        waitForElementVisible(by);
-        sleep(STEP_TIME);
-        String text = getWebElement(by).getText();
-        LogUtils.info("Get text: " + text);
-        ExtentTestManager.logMessage(Status.PASS, "Get text: " + text);
-        return text; //Trả về một giá trị kiểu String
-    }
+//
+//        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
+//            CaptureHelpers.takeScreenshot("setText_" + SystemHelpers.makeSlug(by.toString()));
+//        }
+//    }
+//
+//    @Step("Get text of element {0}")
+//    public static String getElementText(By by) {
+//        waitForPageLoaded();
+//        waitForElementVisible(by);
+//        sleep(STEP_TIME);
+//        String text = getWebElement(by).getText();
+//        LogUtils.info("Get text: " + text);
+//        ExtentTestManager.logMessage(Status.PASS, "Get text: " + text);
+//        return text; //Trả về một giá trị kiểu String
+//    }
 
     //Wait for Element
 
@@ -231,47 +230,47 @@ public class WebUI {
         }
     }
 
-    //Vài hàm bổ trợ nâng cao hơn
-
-    @Step("Scroll to element {0}")
-    public static void scrollToElement(By by) {
-        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
-        js.executeScript("arguments[0].scrollIntoView(false);", getWebElement(by));
-    }
-
-    @Step("Scroll to element {0}")
-    public static void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
-        js.executeScript("arguments[0].scrollIntoView(false);", element);
-
-        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
-            CaptureHelpers.takeScreenshot("scrollToElement_" + SystemHelpers.makeSlug(element.getText()));
-        }
-    }
-
-    @Step("Scroll to element {0} with type {1}")
-    public static void scrollToElement(WebElement element, String type) {
-        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
-        js.executeScript("arguments[0].scrollIntoView(" + type + ");", element);
-    }
-
-    @Step("Scroll to position with X={0}, Y={1}")
-    public static void scrollToPosition(int X, int Y) {
-        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
-        js.executeScript("window.scrollTo(" + X + "," + Y + ");");
-    }
-
-    @Step("Move to element {0}")
-    public static boolean moveToElement(By by) {
-        try {
-            Actions action = new Actions(DriverManager.getDriver());
-            action.moveToElement(getWebElement(by)).release(getWebElement(by)).build().perform();
-            return true;
-        } catch (Exception e) {
-            LogUtils.info(e.getMessage());
-            return false;
-        }
-    }
+//    //Vài hàm bổ trợ nâng cao hơn
+//
+//    @Step("Scroll to element {0}")
+//    public static void scrollToElement(By by) {
+//        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+//        js.executeScript("arguments[0].scrollIntoView(false);", getWebElement(by));
+//    }
+//
+//    @Step("Scroll to element {0}")
+//    public static void scrollToElement(WebElement element) {
+//        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+//        js.executeScript("arguments[0].scrollIntoView(false);", element);
+//
+//        if (PropertiesHelpers.getValue("SCREENSHOT_STEP").equals("yes")) {
+//            CaptureHelpers.takeScreenshot("scrollToElement_" + SystemHelpers.makeSlug(element.getText()));
+//        }
+//    }
+//
+//    @Step("Scroll to element {0} with type {1}")
+//    public static void scrollToElement(WebElement element, String type) {
+//        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+//        js.executeScript("arguments[0].scrollIntoView(" + type + ");", element);
+//    }
+//
+//    @Step("Scroll to position with X={0}, Y={1}")
+//    public static void scrollToPosition(int X, int Y) {
+//        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+//        js.executeScript("window.scrollTo(" + X + "," + Y + ");");
+//    }
+//
+//    @Step("Move to element {0}")
+//    public static boolean moveToElement(By by) {
+//        try {
+//            Actions action = new Actions(DriverManager.getDriver());
+//            action.moveToElement(getWebElement(by)).release(getWebElement(by)).build().perform();
+//            return true;
+//        } catch (Exception e) {
+//            LogUtils.info(e.getMessage());
+//            return false;
+//        }
+//    }
 
     public static boolean moveToOffset(int X, int Y) {
         try {
@@ -284,54 +283,54 @@ public class WebUI {
         }
     }
 
-    /**
-     * @param by truyền vào đối tượng element dạng By
-     * @return Tô màu viền đỏ cho Element trên website
-     */
-    @Step("Highlight element {0}")
-    public static WebElement highLightElement(By by) {
-        // Tô màu border ngoài chính element chỉ định - màu đỏ (có thể đổi màu khác)
-        if (DriverManager.getDriver() instanceof JavascriptExecutor) {
-            ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].style.border='3px solid red'", getWebElement(by));
-            sleep(1);
-        }
-        return getWebElement(by);
-    }
+//    /**
+//     * @param by truyền vào đối tượng element dạng By
+//     * @return Tô màu viền đỏ cho Element trên website
+//     */
+//    @Step("Highlight element {0}")
+//    public static WebElement highLightElement(By by) {
+//        // Tô màu border ngoài chính element chỉ định - màu đỏ (có thể đổi màu khác)
+//        if (DriverManager.getDriver() instanceof JavascriptExecutor) {
+//            ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].style.border='3px solid red'", getWebElement(by));
+//            sleep(1);
+//        }
+//        return getWebElement(by);
+//    }
+//
+//    @Step("Hover on element {0}")
+//    public static boolean hoverElement(By by) {
+//        try {
+//            Actions action = new Actions(DriverManager.getDriver());
+//            action.moveToElement(getWebElement(by)).perform();
+//            return true;
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
 
-    @Step("Hover on element {0}")
-    public static boolean hoverElement(By by) {
-        try {
-            Actions action = new Actions(DriverManager.getDriver());
-            action.moveToElement(getWebElement(by)).perform();
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    @Step("Mouse hover on element {0}")
-    public static boolean mouseHover(By by) {
-        try {
-            Actions action = new Actions(DriverManager.getDriver());
-            action.moveToElement(getWebElement(by)).perform();
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    @Step("Drag element {0} to element {1}")
-    public static boolean dragAndDrop(By fromElement, By toElement) {
-        try {
-            Actions action = new Actions(DriverManager.getDriver());
-            action.dragAndDrop(getWebElement(fromElement), getWebElement(toElement)).perform();
-            //action.clickAndHold(getWebElement(fromElement)).moveToElement(getWebElement(toElement)).release(getWebElement(toElement)).build().perform();
-            return true;
-        } catch (Exception e) {
-            LogUtils.info(e.getMessage());
-            return false;
-        }
-    }
+//    @Step("Mouse hover on element {0}")
+//    public static boolean mouseHover(By by) {
+//        try {
+//            Actions action = new Actions(DriverManager.getDriver());
+//            action.moveToElement(getWebElement(by)).perform();
+//            return true;
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
+//
+//    @Step("Drag element {0} to element {1}")
+//    public static boolean dragAndDrop(By fromElement, By toElement) {
+//        try {
+//            Actions action = new Actions(DriverManager.getDriver());
+//            action.dragAndDrop(getWebElement(fromElement), getWebElement(toElement)).perform();
+//            //action.clickAndHold(getWebElement(fromElement)).moveToElement(getWebElement(toElement)).release(getWebElement(toElement)).build().perform();
+//            return true;
+//        } catch (Exception e) {
+//            LogUtils.info(e.getMessage());
+//            return false;
+//        }
+//    }
 
     public static boolean dragAndDropElement(By fromElement, By toElement) {
         try {
@@ -356,41 +355,41 @@ public class WebUI {
         }
     }
 
-    @Step("Press ENTER on keyboard")
-    public static boolean pressENTER() {
-        try {
-            Robot robot = new Robot();
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.keyRelease(KeyEvent.VK_ENTER);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    @Step("Press ESC on keyboard")
-    public static boolean pressESC() {
-        try {
-            Robot robot = new Robot();
-            robot.keyPress(KeyEvent.VK_ESCAPE);
-            robot.keyRelease(KeyEvent.VK_ESCAPE);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    @Step("Press F11 on keyboard")
-    public static boolean pressF11() {
-        try {
-            Robot robot = new Robot();
-            robot.keyPress(KeyEvent.VK_F11);
-            robot.keyRelease(KeyEvent.VK_F11);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+//    @Step("Press ENTER on keyboard")
+//    public static boolean pressENTER() {
+//        try {
+//            Robot robot = new Robot();
+//            robot.keyPress(KeyEvent.VK_ENTER);
+//            robot.keyRelease(KeyEvent.VK_ENTER);
+//            return true;
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
+//
+//    @Step("Press ESC on keyboard")
+//    public static boolean pressESC() {
+//        try {
+//            Robot robot = new Robot();
+//            robot.keyPress(KeyEvent.VK_ESCAPE);
+//            robot.keyRelease(KeyEvent.VK_ESCAPE);
+//            return true;
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
+//
+//    @Step("Press F11 on keyboard")
+//    public static boolean pressF11() {
+//        try {
+//            Robot robot = new Robot();
+//            robot.keyPress(KeyEvent.VK_F11);
+//            robot.keyRelease(KeyEvent.VK_F11);
+//            return true;
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
 
     /**
      * Wait for Page

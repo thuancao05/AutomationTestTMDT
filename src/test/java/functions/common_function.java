@@ -39,7 +39,6 @@ public class common_function   {
         element.clear();
         element.sendKeys(text);
     }
-
     public void press(Keys key) {
         actions.sendKeys(key).perform();
     }
@@ -138,4 +137,52 @@ public class common_function   {
         Assert.assertEquals(obtainedList,sortedList);
     }
 
+    //lay tong so hang trong bang
+    public int getTotalRowInTable(By by){
+        scrollToElement(by);
+        List<WebElement> elementList = DriverManager.getDriver().findElements(by);
+        int rowTotal = elementList.size();
+        System.out.println("Total Row : " + rowTotal);
+        return rowTotal;
+    }
+
+    // lau tong so cot trong bang
+    public int getTotalColumnInTable(By by){
+        scrollToElement(by);
+        List<WebElement> elementList = DriverManager.getDriver().findElements(by);
+        int columnTotal = elementList.size()/2;
+        System.out.println("Total Column : " + columnTotal);
+        return columnTotal;
+    }
+
+    //lay so dong trung voi ten vendor
+    public int getColumnByTitle(String str, By columnInTable) {
+
+        int columnTotal = getTotalColumnInTable(columnInTable);    //Tong so cot trong bang
+        for (int i = 1; i <= columnTotal; i++) {
+            WebElement element = DriverManager.getDriver().findElement(By.xpath("//table[1]/thead[1]/tr[1]/th["+i+"]"));
+            scrollToElement(element);
+            if(str.equals(element.getText()))
+                return i;
+        }
+        return -1;
+    }
+
+    //kiem tra du lieu trong bang
+    public boolean checkDataInTable(String titleColumn, String data, By columnInTable, By rowInTable) {
+        int column = getColumnByTitle(titleColumn, columnInTable);
+        int rowTotal = getTotalRowInTable(rowInTable);    //Tong so cot trong bang
+        for (int i = 2; i <= rowTotal; i++) {
+            WebElement element = DriverManager.getDriver().findElement(By.xpath("//table/tbody/tr[" + i + "]/td[" + column + "]"));
+            scrollToElement(element);
+            System.out.println(element.getText());
+
+            if(data.equals(element.getText())) {
+                Assert.assertTrue(true);
+                return true;
+            }
+        }
+        Assert.assertTrue(false);
+        return false;
+    }
 }

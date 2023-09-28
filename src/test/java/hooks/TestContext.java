@@ -14,7 +14,8 @@ public class TestContext {
     private login_function loginFunction;
     private index_function indexFunction;
     private register_function registerFunction;
-
+    private detailProduct_function detailProductFunction;
+    private cart_function cartFunction;
 
     public TestContext() {
         ThreadGuard.protect(new DriverFactory().createDriver());
@@ -45,6 +46,19 @@ public class TestContext {
             registerFunction = new register_function();
         }
         return registerFunction;
+    }
+    public detailProduct_function getDetailProductFunction() {
+        if (detailProductFunction == null) {
+            detailProductFunction = new detailProduct_function();
+        }
+        return detailProductFunction;
+    }
+
+    public cart_function getCartFunction() {
+        if (cartFunction == null) {
+            cartFunction = new cart_function();
+        }
+        return cartFunction;
     }
     public WebDriver getDriver() {
         return DriverManager.getDriver();

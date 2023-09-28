@@ -100,19 +100,19 @@
       <version>5.0.9</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-    <dependency>
-      <groupId>io.qameta.allure</groupId>
-      <artifactId>allure-testng</artifactId>
-      <version>2.22.1</version>
-    </dependency>
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/io.qameta.allure/allure-testng &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>io.qameta.allure</groupId>-->
+<!--      <artifactId>allure-testng</artifactId>-->
+<!--      <version>2.22.1</version>-->
+<!--    </dependency>-->
 
-    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-attachments -->
-    <dependency>
-      <groupId>io.qameta.allure</groupId>
-      <artifactId>allure-attachments</artifactId>
-      <version>2.22.1</version>
-    </dependency>
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/io.qameta.allure/allure-attachments &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>io.qameta.allure</groupId>-->
+<!--      <artifactId>allure-attachments</artifactId>-->
+<!--      <version>2.22.1</version>-->
+<!--    </dependency>-->
 
     <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
     <dependency>

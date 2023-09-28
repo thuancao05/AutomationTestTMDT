@@ -37,14 +37,10 @@ public class StepLogin {
         loginFunction.clickLoginButton();
     }
 
-    @Then("user redirect to index page {string}")
-    public void userRedirectToIndexPage(String arg0) {
-        indexFunction.verifyLogoIndexPage();
-    }
 
     @And("user click logout button")
     public void userClickLogoutButton() {
-        indexFunction.clickLogOutBtn();
+        indexFunction.clickLogOutButton();
     }
 
 
