@@ -150,7 +150,7 @@ public class common_function   {
     public int getTotalColumnInTable(By by){
         scrollToElement(by);
         List<WebElement> elementList = DriverManager.getDriver().findElements(by);
-        int columnTotal = elementList.size()/2;
+        int columnTotal = elementList.size();
         System.out.println("Total Column : " + columnTotal);
         return columnTotal;
     }
@@ -162,6 +162,7 @@ public class common_function   {
         for (int i = 1; i <= columnTotal; i++) {
             WebElement element = DriverManager.getDriver().findElement(By.xpath("//table[1]/thead[1]/tr[1]/th["+i+"]"));
             scrollToElement(element);
+            System.out.println(element.getText());
             if(str.equals(element.getText()))
                 return i;
         }
@@ -184,5 +185,10 @@ public class common_function   {
         }
         Assert.assertTrue(false);
         return false;
+    }
+
+    public void clearSession(){
+        WebElement element = DriverManager.getDriver().findElement(By.id("logoutBtn"));
+        element.click();
     }
 }

@@ -23,14 +23,10 @@ public class cart_function {
         commonFunction.sleep(1000);
     }
 
-    public void checkProductInCart(String nameProduct, String quantityProduct){
-
-    }
 
     // kiem tra du lieu trong bang theo ten cot
     public void checkDataInTable(String titleName, String data){
-//        String str = commonFunction.getValue(By.xpath("//table/tbody/tr[2]/td[3]"));
-//        System.out.println(str);
         commonFunction.checkDataInTable(titleName,data,cartPage.columnInTable, cartPage.rowInTable);
+        commonFunction.clearSession();
     }
 }

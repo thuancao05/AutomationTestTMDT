@@ -38,6 +38,6 @@ public class StepAddToCart {
 
     @Then("the cart page displayed product added with {string}")
     public void theCartPageDisplayedProductAddedWith(String arg0) {
-        cartFunction.checkDataInTable("Tên sản phẩm", "Điện Trở Băng A07 ( Trở Thanh )");
+        cartFunction.checkDataInTable("Số lượng", arg0);
     }
 }
