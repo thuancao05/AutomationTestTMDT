@@ -25,6 +25,7 @@ public class index_function {
         commonFunction.clicks(indexPage.cartBtn);
     }
     public void clickLogOutButton(){
+        commonFunction.sleep(3000);
         commonFunction.clicks(indexPage.logoutBtn);
     }
     public void inputSearch(String str){
@@ -32,6 +33,7 @@ public class index_function {
     }
     public void clickSearchButton(){
         commonFunction.press(Keys.ENTER);
+        commonFunction.sleep(1000);
     }
 
     public int getToTalSearch(){

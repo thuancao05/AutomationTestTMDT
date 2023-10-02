@@ -1,15 +1,5 @@
 Feature: Register
 
-  @SuccessfulRegister
-  Scenario Outline: Successful Register
-    Given user navigate to register page "http://localhost:5173/register"
-    When user enter name: "<name>", phone: "<phone>" email "<email>" and password: "<password>"
-    And click register button
-    Then user should see an success message "Đăng ký thành công !"
-    Examples:
-      | name             | phone      | email             | password |
-      | Huỳnh Văn Bá     | 0562147852 | vanba@gmail.com   | 123      |
-
   @ErrorName
   Scenario Outline: Error Name
     Given user navigate to register page "http://localhost:5173/register"
@@ -63,3 +53,14 @@ Feature: Register
     Examples:
       | name             | phone      | email             | password |
       | Lê Minh Thắng    | 0562147852 | thang@gmail.com   | 123      |
+
+
+  @SuccessfulRegister
+  Scenario Outline: Successful Register
+    Given user navigate to register page "http://localhost:5173/register"
+    When user enter name: "<name>", phone: "<phone>" email "<email>" and password: "<password>"
+    And click register button
+    Then user should see an success message "Đăng ký thành công !"
+    Examples:
+      | name             | phone      | email             | password |
+      | Huỳnh Văn Bá     | 0562147852 | vanba@gmail.com   | 123      |

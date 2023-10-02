@@ -17,7 +17,6 @@ public class StepLogin {
     public StepLogin(TestContext testContext){
         loginFunction = testContext.getLoginFunction();
         indexFunction = testContext.getIndexFunction();
-
     }
 
     @Given("user navigate to Login page {string}")

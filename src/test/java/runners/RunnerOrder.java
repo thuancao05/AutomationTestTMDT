@@ -4,7 +4,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.Test;
 
 @CucumberOptions(
-        features = "src/test/resources/features/addProductToCart.feature",
+        features = "src/test/resources/features/order.feature",
         glue = {"stepdefinitions",
                 "functions",
                 "pages",
@@ -13,5 +13,5 @@ import org.testng.annotations.Test;
         plugin = {"pretty", "html:target/cucumber-html-report.html"}
 )
 @Test
-public class RunnerAddToCart extends AbstractTestNGCucumberTests{
+public class RunnerOrder extends AbstractTestNGCucumberTests{
 }

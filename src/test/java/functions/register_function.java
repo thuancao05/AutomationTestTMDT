@@ -37,7 +37,6 @@ public class register_function {
     public void checkErrorName(String str){
         Assert.assertTrue(commonFunction.isDisplayed(registerPage.errorNameMessage));
         Assert.assertEquals(str, commonFunction.getValue(registerPage.errorNameMessage));
-
     }
     public void checkErrorPhone(String str){
         Assert.assertTrue(commonFunction.isDisplayed(registerPage.errorPhoneMessage));

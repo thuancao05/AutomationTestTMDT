@@ -31,7 +31,7 @@ public class login_function {
     }
     public void clickLoginButton( ) {
         commonFunction.clicks(login_page.loginBtn);
-        commonFunction.sleep(1000);
+        commonFunction.sleep(2000);
     }
     public void checkErrorEmail(String str){
         Assert.assertTrue(commonFunction.isDisplayed(login_page.errorEmailMessage));

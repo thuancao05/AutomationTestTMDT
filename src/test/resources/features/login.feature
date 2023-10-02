@@ -1,18 +1,5 @@
 Feature: Login
 
-
-  @SuccessfulLogin
-  Scenario Outline: Successful Login
-    Given user navigate to Login page "http://localhost:5173/login"
-    When user enter email "<email>" and password: "<password>"
-    And click login button
-    Then user redirect to index page "http://localhost:5173/index/products"
-    And user click logout button
-    Examples:
-      | email             | password |
-      | thang@gmail.com   | thang123 |
-
-
   @ErrorEmail
   Scenario Outline: Error Email
     Given user navigate to Login page "http://localhost:5173/login"
@@ -51,3 +38,14 @@ Feature: Login
       |  helloword@gmail.com    |    123   |
 #      |  totnghiep@gmail.com    |    123   |
 #      |  dilamthoi@gmail.com    |    123   |
+
+  @SuccessfulLogin
+  Scenario Outline: Successful Login
+    Given user navigate to Login page "http://localhost:5173/login"
+    When user enter email "<email>" and password: "<password>"
+    And click login button
+    Then user redirect to index page "http://localhost:5173/index/products"
+    And user click logout button
+    Examples:
+      | email             | password |
+      | thang@gmail.com   | thang123 |

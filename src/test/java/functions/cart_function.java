@@ -11,7 +11,7 @@ public class cart_function {
     public cart_page cartPage = new cart_page();
     public common_function commonFunction = new common_function();
 
-    public void verifyRegisterPage(){
+    public void verifyCartPage(){
         commonFunction.sleep(500);
         Assert.assertTrue(commonFunction.isDisplayed(cartPage.titleGioHangLabel));
         System.out.println("Verified cart page");

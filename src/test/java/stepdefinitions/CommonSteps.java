@@ -46,9 +46,12 @@ public class CommonSteps {
         registerFunction.checkErrorRegister(arg0);
 
     }
-    @Then("user redirect to index page {string}")
+    @Given("user redirect to index page {string}")
     public void userRedirectToIndexPage(String arg0) {
         WebUI.openURL(arg0);
         indexFunction.verifyLogoIndexPage();
+    }
+    @Given("user stay at payment page")
+    public void userStayAtPaymentPage() {
     }
 }

@@ -1,7 +1,7 @@
-Feature: Cart
+Feature: Add Product To Cart
 
   Background: Search Product
-    Then user redirect to index page "http://localhost:5173/index/products"
+    Given user redirect to index page "http://localhost:5173/index/products"
     When user enter search value: "điện trở"
     And click search button
     Then user should see list products with name include "điện trở"
