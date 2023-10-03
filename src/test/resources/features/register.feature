@@ -52,7 +52,7 @@ Feature: Register
 
     Examples:
       | name             | phone      | email             | password |
-      | Lê Minh Thắng    | 0562147852 | thang@gmail.com   | 123      |
+      | Le Minh Thang    | 0562147852 | thang@gmail.com   | 123      |
 
 
   @SuccessfulRegister

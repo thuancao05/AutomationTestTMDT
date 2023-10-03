@@ -56,6 +56,49 @@ public class StepOrder {
     @Then("user should see an error name message bellow textbox name {string}")
     public void userShouldSeeAnErrorNameMessageBellowTextboxName(String arg0) {
         paymentFunction.checkErrorName(arg0);
-        indexFunction.clickLogOutButton();
+    }
+
+    @When("user input phone is {string}")
+    public void userInputPhoneIs(String arg0) {
+        paymentFunction.inputPhone(arg0);
+    }
+
+    @Then("user should see an error phone message bellow textbox phone {string}")
+    public void userShouldSeeAnErrorPhoneMessageBellowTextboxPhone(String arg0) {
+        paymentFunction.checkErrorPhone(arg0);
+    }
+
+    @When("user input email is {string}")
+    public void userInputEmailIs(String arg0) {
+        paymentFunction.inputEmail(arg0);
+    }
+
+    @Then("user should see an error email message bellow textbox email {string}")
+    public void userShouldSeeAnErrorEmailMessageBellowTextboxEmail(String arg0) {
+        paymentFunction.checkErrorEmail(arg0);
+    }
+
+    @When("user input address is {string}")
+    public void userInputAddressIs(String arg0) {
+        paymentFunction.inputAddress(arg0);
+    }
+
+    @Then("user should see an error address message bellow textbox address {string}")
+    public void userShouldSeeAnErrorAddressMessageBellowTextboxAddress(String arg0) {
+        paymentFunction.checkErrorAddress(arg0);
+    }
+
+    @When("user input address is {string}, {string}, {string}, {string}, {string}")
+    public void userInputAddressIs(String arg0, String arg1, String arg2, String arg3, String arg4) {
+        paymentFunction.inputAddress(arg0);
+        paymentFunction.selectCity(arg1);
+        paymentFunction.selectDistrict(arg2);
+        paymentFunction.selectWard(arg3);
+        paymentFunction.inputNote(arg4);
+    }
+
+    @Then("user should see an order success message {string}")
+    public void userShouldSeeAnOrderSuccessMessage(String arg0) {
+        paymentFunction.checkOrderSuccess(arg0);
     }
 }

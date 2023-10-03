@@ -13,7 +13,7 @@ public class index_function {
     public common_function commonFunction = new common_function();
 
     public void verifyLogoIndexPage(){
-        commonFunction.sleep(5000);
+        commonFunction.sleep(2000);
         Assert.assertTrue(commonFunction.isDisplayed(indexPage.logo));
         commonFunction.sleep(500);
         System.out.println("Verified index page");
@@ -25,7 +25,7 @@ public class index_function {
         commonFunction.clicks(indexPage.cartBtn);
     }
     public void clickLogOutButton(){
-        commonFunction.sleep(3000);
+        commonFunction.sleep(1000);
         commonFunction.clicks(indexPage.logoutBtn);
     }
     public void inputSearch(String str){

@@ -17,4 +17,6 @@ public class payment_page {
     public static By errorPhoneMessage = By.id("errorPhoneMessage");
     public static By errorEmailMessage = By.id("errorEmailMessage");
     public static By errorAddressMessage = By.id("errorAddressMessage");
+    public static By successfulOrderMessage = By.xpath("//span[contains(text(),'Đặt hàng thành công')]");
+
 }

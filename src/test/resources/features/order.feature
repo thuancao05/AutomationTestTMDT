@@ -20,69 +20,50 @@ Feature: Order
     When user input name is "THIS STRING IS 256 CHARACTERS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     And click submit button
     Then user should see an error name message bellow textbox name "Bắt buộc điền họ và tên tối đa 255 ký tự"
-#
-#  @EmptyPhone
-#  Scenario Outline: Error Phone
-#    Given user navigate to register page "http://localhost:5173/register"
-#    When user enter name: "<name>", phone: "<phone>" email "<email>" and password: "<password>"
-#    And click register button
-#    Then user should see an error phone message "Bắt buộc điền số điện thoại đúng định dạng"
-#
-#    Examples:
-#      | name             | phone      | email             | password |
-#      | Huỳnh Văn Bá     |            | vanba@gmail.com   | 123      |
-#
-#  @ErrorFormatPhone
-#  Scenario Outline: Error Phone
-#    Given user navigate to register page "http://localhost:5173/register"
-#    When user enter name: "<name>", phone: "<phone>" email "<email>" and password: "<password>"
-#    And click register button
-#    Then user should see an error phone message "Bắt buộc điền số điện thoại đúng định dạng"
-#
-#    Examples:
-#      | name             | phone      | email             | password |
-#      | Huỳnh Văn Bá     |            | vanba@gmail.com   | 123      |
-#
-#  @EmptyEmail
-#  Scenario Outline: Error Email
-#    Given user navigate to register page "http://localhost:5173/register"
-#    When user enter name: "<name>", phone: "<phone>" email "<email>" and password: "<password>"
-#    And click register button
-#    Then user should see an error email message "Bắt buộc điền email đúng định dạng"
-#
-#    Examples:
-#      | name             | phone      | email             | password |
-#      | Huỳnh Văn Bá     | 0562147852 |                   | 123      |
-#
-#  @ErrorFormatEmail
-#  Scenario Outline: Error Email
-#    Given user navigate to register page "http://localhost:5173/register"
-#    When user enter name: "<name>", phone: "<phone>" email "<email>" and password: "<password>"
-#    And click register button
-#    Then user should see an error email message "Bắt buộc điền email đúng định dạng"
-#
-#    Examples:
-#      | name             | phone      | email             | password |
-#      | Huỳnh Văn Bá     | 0562147852 |                   | 123      |
-#
-#  @EmptyAddress
-#  Scenario Outline: Error Password
-#    Given user navigate to register page "http://localhost:5173/register"
-#    When user enter name: "<name>", phone: "<phone>" email "<email>" and password: "<password>"
-#    And click register button
-#    Then user should see an error password message "Bắt buộc điền mật khẩu tối đa 255 ký tự"
-#
-#    Examples:
-#      | name             | phone      | email             | password |
-#      | Huỳnh Văn Bá     | 0562147852 | vanba@gmail.com   |          |
-#
-#
-#  @SuccessfulRegister
-#  Scenario Outline: Successful Register
-#    Given user navigate to register page "http://localhost:5173/register"
-#    When user enter name: "<name>", phone: "<phone>" email "<email>" and password: "<password>"
-#    And click register button
-#    Then user should see an success message "Đăng ký thành công !"
-#    Examples:
-#      | name             | phone      | email             | password |
-#      | Huỳnh Văn Bá     | 0562147852 | vanba@gmail.com   | 123      |
+
+  @EmptyPhone
+  Scenario: Empty Phone
+    Given user stay at payment page
+    When user input phone is ""
+    And click submit button
+    Then user should see an error phone message bellow textbox phone "Bắt buộc điền số điện thoại đúng định dạng"
+
+
+  @ErrorFormatPhone
+  Scenario: Error Format Phone
+    Given user stay at payment page
+    When user input phone is "0abc4561478"
+    And click submit button
+    Then user should see an error phone message bellow textbox phone "Bắt buộc điền số điện thoại đúng định dạng"
+
+
+  @EmptyEmail
+  Scenario: Empty Email
+    Given user stay at payment page
+    When user input email is ""
+    And click submit button
+    Then user should see an error email message bellow textbox email "Bắt buộc điền email đúng định dạng"
+
+  @ErrorFormatEmail
+  Scenario: Error Format Email
+    Given user stay at payment page
+    When user input email is ""
+    And click submit button
+    Then user should see an error email message bellow textbox email "Bắt buộc điền email đúng định dạng"
+
+  @EmptyAddress
+  Scenario: Empty Address
+    Given user stay at payment page
+    When user input address is ""
+    And click submit button
+    Then user should see an error address message bellow textbox address "Bắt buộc chọn địa chỉ"
+
+  @SuccessfulOrder
+  Scenario Outline: Successful Order
+    Given user stay at payment page
+    When user input address is "<address>", "<city>", "<district>", "<ward>", "<note>"
+    And click submit button
+    Then user should see an order success message "Đặt hàng thành công"
+    Examples:
+      | address       | city              | district         | ward               | note               |
+      | Số nhà 32     | Thành phố Cần Thơ | Quận Ninh Kiều   | Phường An Hòa      | Cho kiểm tra hàng  |

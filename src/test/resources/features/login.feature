@@ -9,8 +9,6 @@ Feature: Login
 
     Examples:
       | email        | password |
-#      |              |       |
-#      |   123        | 123    |
       | abcgmail.com | 123    |
 
   @ErrorPassword
@@ -22,8 +20,6 @@ Feature: Login
 
     Examples:
       | email        | password |
-#      |              |          |
-#      |   123        |          |
       | abcgmail.com |          |
 
   @UserDoesNotExist
@@ -36,8 +32,6 @@ Feature: Login
     Examples:
       | email                   | password |
       |  helloword@gmail.com    |    123   |
-#      |  totnghiep@gmail.com    |    123   |
-#      |  dilamthoi@gmail.com    |    123   |
 
   @SuccessfulLogin
   Scenario Outline: Successful Login

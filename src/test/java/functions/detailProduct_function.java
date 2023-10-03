@@ -26,7 +26,7 @@ public class detailProduct_function {
 
     public void clickAddToCartButton( ) {
         commonFunction.clicks(detailProductPage.addToCartButton);
-        commonFunction.sleep(5000);
+        commonFunction.sleep(1000);
     }
 
 

@@ -20,7 +20,6 @@ public class cart_function {
     public void clickOrderButton() {
         commonFunction.sleep(1000);
         commonFunction.clicks(cartPage.orderButton);
-        commonFunction.sleep(1000);
     }
 
 
