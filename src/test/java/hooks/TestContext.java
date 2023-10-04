@@ -3,6 +3,8 @@ package hooks;
 import driver.DriverFactory;
 import driver.DriverManager;
 import functions.*;
+import functions.admin.addNewProduct_function;
+import functions.admin.product_function;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ThreadGuard;
 import utils.LogUtils;
@@ -17,6 +19,9 @@ public class TestContext {
     private detailProduct_function detailProductFunction;
     private cart_function cartFunction;
     private payment_function paymentFunction;
+    private addNewProduct_function addNewProductFunction;
+    private product_function productFunction;
+
 
     public TestContext() {
         ThreadGuard.protect(new DriverFactory().createDriver());
@@ -67,6 +72,19 @@ public class TestContext {
             paymentFunction = new payment_function();
         }
         return paymentFunction;
+    }
+
+    public addNewProduct_function getAddNewProductFunction() {
+        if (addNewProductFunction == null) {
+            addNewProductFunction = new addNewProduct_function();
+        }
+        return addNewProductFunction;
+    }
+    public product_function getProductFunction() {
+        if (productFunction == null) {
+            productFunction = new product_function();
+        }
+        return productFunction;
     }
     public WebDriver getDriver() {
         return DriverManager.getDriver();

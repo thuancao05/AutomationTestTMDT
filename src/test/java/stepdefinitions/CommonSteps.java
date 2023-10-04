@@ -54,4 +54,9 @@ public class CommonSteps {
     @Given("user stay at payment page")
     public void userStayAtPaymentPage() {
     }
+
+    @Then("user should see admin product page")
+    public void userShouldSeeAdminProductPage() {
+
+    }
 }
