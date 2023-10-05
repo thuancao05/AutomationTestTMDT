@@ -1,7 +1,12 @@
 package functions.admin;
 
 
+import driver.DriverManager;
 import functions.common_function;
+import org.checkerframework.checker.units.qual.K;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.admin.addNewProduct_page;
 import pages.admin.products_page;
@@ -23,24 +28,55 @@ public class addNewProduct_function {
         commonFunction.sleep(500);
     }
     public void inputPriceProduct(String str) {
+        WebElement element = DriverManager.getDriver().findElement(By.xpath("//input[@id='priceInput']"));
+        element.click();
+        for (int i = 1; i <= 10; i++){
+            commonFunction.press(Keys.BACK_SPACE);
+        }
         commonFunction.sendKeys(addNewProductPage.priceInput, str);
         commonFunction.sleep(500);
     }
     public void inputCategoryProduct(String str) {
         commonFunction.sendKeys(addNewProductPage.categoryInput, str);
+        commonFunction.press(Keys.ENTER);
         commonFunction.sleep(500);
     }
     public void inputQuantityProduct(String str) {
+        WebElement element = DriverManager.getDriver().findElement(By.xpath("//input[@id='quantityInput']"));
+        element.click();
+        for (int i = 1; i <= 10; i++){
+            commonFunction.press(Keys.BACK_SPACE);
+        }
         commonFunction.sendKeys(addNewProductPage.quantityInput, str);
         commonFunction.sleep(500);
     }
     public void inputDateProduct(String str) {
-        commonFunction.sendKeys(addNewProductPage.dateInput, str);
+        WebElement element = DriverManager.getDriver().findElement(By.xpath("//input[@id='dateInput']"));
+        element.click();
+        for (int i = 1; i <= 10; i++){
+            commonFunction.press(Keys.BACK_SPACE);
+            commonFunction.press(Keys.DELETE);
+        }
+        element.sendKeys(str);
+        commonFunction.press(Keys.ENTER);
         commonFunction.sleep(500);
     }
-    // kiem tra du lieu trong bang theo ten cot
-//    public void checkDataInTable(String titleName, String data){
-//        commonFunction.checkDataInTable(titleName,data,cartPage.columnInTable, cartPage.rowInTable);
-//        commonFunction.clearSession();
-//    }
+    public void checkErrorName(String str){
+        try {
+            Assert.assertEquals(str, commonFunction.getValue(addNewProductPage.errorNameMessage));
+            commonFunction.clicks(addNewProductPage.logoutButton);
+        }catch (Exception e) {
+            commonFunction.clicks(addNewProductPage.logoutButton);
+            Assert.assertTrue(commonFunction.isDisplayed(addNewProductPage.errorNameMessage));
+        }
+    }
+    public void checkErrorPrice(String str){
+        try {
+            Assert.assertEquals(str, commonFunction.getValue(addNewProductPage.errorPriceMessage));
+            commonFunction.clicks(addNewProductPage.logoutButton);
+        }catch (Exception e) {
+            commonFunction.clicks(addNewProductPage.logoutButton);
+            Assert.assertTrue(commonFunction.isDisplayed(addNewProductPage.errorPriceMessage));
+        }
+    }
 }

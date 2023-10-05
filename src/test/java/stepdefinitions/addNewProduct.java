@@ -35,5 +35,28 @@ public class addNewProduct {
         addNewProductFunction.clickSubmitAddNewProductButton();
     }
 
+    @Then("the list product page display new product on top list products with name is {string}")
+    public void theListProductPageDisplayNewProductOnTopListProductsWithNameIs(String arg0) {
+        productFunction.checkDataInTable("Tên sản phẩm", arg0);
 
+    }
+
+    @When("user input product name is {string}")
+    public void userInputProductNameIs(String arg0) {
+        addNewProductFunction.inputNameProduct(arg0);
+    }
+    @Then("user should see an error name message bellow textbox product name {string}")
+    public void userShouldSeeAnErrorNameMessageBellowTextboxProductName(String arg0) {
+        addNewProductFunction.checkErrorName(arg0);
+    }
+
+    @When("user input product price is {string}")
+    public void userInputProductPriceIs(String arg0) {
+        addNewProductFunction.inputPriceProduct(arg0);
+    }
+
+    @Then("user should see an error name message bellow textbox product price {string}")
+    public void userShouldSeeAnErrorNameMessageBellowTextboxProductPrice(String arg0) {
+        addNewProductFunction.checkErrorPrice(arg0);
+    }
 }

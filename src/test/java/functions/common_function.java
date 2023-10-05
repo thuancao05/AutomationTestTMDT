@@ -30,6 +30,7 @@ public class common_function   {
     }
 
     public void clicks(By by) {
+        scrollToElement(by);
         JavascriptExecutor executor = (JavascriptExecutor) getDriver();
         executor.executeScript("arguments[0].click();", getDriver().findElement(by));
     }

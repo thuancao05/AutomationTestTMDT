@@ -2,7 +2,7 @@ package pages.admin;
 
 import org.openqa.selenium.By;
 
-public class addNewProduct_page {
+public class addNewProduct_page extends base_admin_page{
     public static By submitButton = By.id("submitButton");
     public static By nameInput = By.id("nameInput");
     public static By describeInput = By.id("describeInput");
@@ -10,5 +10,7 @@ public class addNewProduct_page {
     public static By categoryInput = By.id("categoryInput");
     public static By quantityInput = By.id("quantityInput");
     public static By dateInput = By.id("dateInput");
+    public static By errorNameMessage = By.id("errorNameMessage");
+    public static By errorPriceMessage = By.id("errorPriceMessage");
 
 }

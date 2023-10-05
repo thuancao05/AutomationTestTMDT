@@ -40,4 +40,5 @@ public class StepAddToCart {
     public void theCartPageDisplayedProductAddedWith(String arg0) {
         cartFunction.checkDataInTable("Số lượng", arg0);
     }
+
 }

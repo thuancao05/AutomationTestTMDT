@@ -44,7 +44,7 @@ public class DriverFactory {
 //        options.addArguments("--remote-allow-origins=*");
 
         driver = new ChromeDriver();
-//        driver.manage().window().maximize();
+        driver.manage().window().maximize();
         return driver;
     }
 
