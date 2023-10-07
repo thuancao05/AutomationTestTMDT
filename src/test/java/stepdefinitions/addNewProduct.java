@@ -59,4 +59,44 @@ public class addNewProduct {
     public void userShouldSeeAnErrorNameMessageBellowTextboxProductPrice(String arg0) {
         addNewProductFunction.checkErrorPrice(arg0);
     }
+
+    @When("user input product category is {string}")
+    public void userInputProductCategoryIs(String arg0) {
+    }
+
+    @Then("user should see an error name message bellow textbox product category {string}")
+    public void userShouldSeeAnErrorNameMessageBellowTextboxProductCategory(String arg0) {
+        addNewProductFunction.checkErrorCategory(arg0);
+    }
+
+    @When("user input product quantity is {string}")
+    public void userInputProductQuantityIs(String arg0) {
+        addNewProductFunction.inputQuantityProduct(arg0);
+
+    }
+
+    @Then("user should see an error name message bellow textbox product quantity {string}")
+    public void userShouldSeeAnErrorNameMessageBellowTextboxProductQuantity(String arg0) {
+        addNewProductFunction.checkErrorQuantity(arg0);
+    }
+
+    @When("user input product date of manufacture is {string}")
+    public void userInputProductDateOfManufactureIs(String arg0) {
+        addNewProductFunction.inputDateProduct(arg0);
+    }
+
+    @Then("user should see an error name message bellow textbox product date of manufacture {string}")
+    public void userShouldSeeAnErrorNameMessageBellowTextboxProductDateOfManufacture(String arg0) {
+        addNewProductFunction.checkErrorDateOfManufacture(arg0);
+    }
+
+    @When("user not select image")
+    public void userNotSelectImage() {
+
+    }
+
+    @Then("user should see an error name message bellow textbox product image {string}")
+    public void userShouldSeeAnErrorNameMessageBellowTextboxProductImage(String arg0) {
+        addNewProductFunction.checkErrorImage(arg0);
+    }
 }

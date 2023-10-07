@@ -20,13 +20,41 @@ Feature: Admin Add New Product
 #    When user input product name is "THIS STRING IS 256 CHARACTERS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #    And submit click add new product button
 #    Then user should see an error name message bellow textbox product name "Bắt buộc điền tên sản phẩm có độ dài tối đa 255 ký tự"
+#
+#  @EmptyProductPrice
+#  Scenario: Empty Product Price
+#    Given user click add new product button
+#    When user input product price is ""
+#    And submit click add new product button
+#    Then user should see an error name message bellow textbox product price "Bắt buộc nhập giá"
+#
+#  @EmptyProductCategory
+#  Scenario: Empty Product Category
+#    Given user click add new product button
+#    When user input product category is ""
+#    And submit click add new product button
+#    Then user should see an error name message bellow textbox product category "Bắt buộc chọn danh mục"
 
-  @EmptyProductPrice
-  Scenario: Empty Product Price
+#  @EmptyProductQuantity
+#  Scenario: Empty Product Quantity
+#    Given user click add new product button
+#    When user input product quantity is ""
+#    And submit click add new product button
+#    Then user should see an error name message bellow textbox product quantity "Bắt buộc nhập số lượng"
+
+#  @EmptyProductDateOfManufacture
+#  Scenario: Empty Product Date Of Manufacture
+#    Given user click add new product button
+#    When user input product date of manufacture is "2025/01/01"
+#    And submit click add new product button
+#    Then user should see an error name message bellow textbox product date of manufacture "Bắt buộc nhập ngày sản xuất hợp lệ"
+
+  @EmptyProductImage
+  Scenario: Empty Product Image
     Given user click add new product button
-    When user input product price is ""
+    When user not select image
     And submit click add new product button
-    Then user should see an error name message bellow textbox product price "Bắt buộc nhập giá"
+    Then user should see an error name message bellow textbox product image "Bắt buộc tải lên ảnh"
 
 #  @SuccessfulAddNewProduct
 #  Scenario Outline: Add New Product

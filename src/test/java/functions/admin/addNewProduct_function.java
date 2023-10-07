@@ -18,6 +18,8 @@ public class addNewProduct_function {
     public void clickSubmitAddNewProductButton() {
         commonFunction.sleep(1000);
         commonFunction.clicks(addNewProductPage.submitButton);
+        commonFunction.sleep(1000);
+
     }
     public void inputNameProduct(String str) {
         commonFunction.sendKeys(addNewProductPage.nameInput, str);
@@ -77,6 +79,52 @@ public class addNewProduct_function {
         }catch (Exception e) {
             commonFunction.clicks(addNewProductPage.logoutButton);
             Assert.assertTrue(commonFunction.isDisplayed(addNewProductPage.errorPriceMessage));
+        }
+    }
+    public void checkErrorCategory(String str){
+        try {
+            Assert.assertEquals(str, commonFunction.getValue(addNewProductPage.errorCategoryMessage));
+            commonFunction.clicks(addNewProductPage.logoutButton);
+        }catch (Exception e) {
+            commonFunction.clicks(addNewProductPage.logoutButton);
+            Assert.assertTrue(commonFunction.isDisplayed(addNewProductPage.errorCategoryMessage));
+        }
+    }
+    public void checkErrorQuantity(String str){
+        try {
+            Assert.assertEquals(str, commonFunction.getValue(addNewProductPage.errorQuantityMessage));
+            commonFunction.clicks(addNewProductPage.logoutButton);
+        }catch (Exception e) {
+            commonFunction.clicks(addNewProductPage.logoutButton);
+            Assert.assertTrue(commonFunction.isDisplayed(addNewProductPage.errorQuantityMessage));
+        }
+    }
+    public void checkErrorDateOfManufacture(String str){
+        try {
+            Assert.assertEquals(str, commonFunction.getValue(addNewProductPage.errorDateMessage));
+            commonFunction.clicks(addNewProductPage.logoutButton);
+        }catch (Exception e) {
+            commonFunction.clicks(addNewProductPage.logoutButton);
+            Assert.assertTrue(commonFunction.isDisplayed(addNewProductPage.errorDateMessage));
+        }
+    }
+    public void checkErrorImage(String str){
+        try {
+            Assert.assertEquals(str, commonFunction.getValue(addNewProductPage.errorImageMessage));
+            commonFunction.clicks(addNewProductPage.logoutButton);
+        }catch (Exception e) {
+            commonFunction.clicks(addNewProductPage.logoutButton);
+            Assert.assertTrue(commonFunction.isDisplayed(addNewProductPage.errorImageMessage));
+        }
+    }
+
+    public void uploadImage(String str){
+        try {
+            Assert.assertEquals(str, commonFunction.getValue(addNewProductPage.errorImageMessage));
+            commonFunction.clicks(addNewProductPage.logoutButton);
+        }catch (Exception e) {
+            commonFunction.clicks(addNewProductPage.logoutButton);
+            Assert.assertTrue(commonFunction.isDisplayed(addNewProductPage.errorImageMessage));
         }
     }
 }
