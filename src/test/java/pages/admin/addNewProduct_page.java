@@ -16,5 +16,8 @@ public class addNewProduct_page extends base_admin_page{
     public static By errorQuantityMessage = By.id("errorQuantityMessage");
     public static By errorDateMessage = By.id("errorDateMessage");
     public static By errorImageMessage = By.id("errorImageMessage");
+    public static By chooseImageButton = By.id("chooseImageButton");
+    public static By uploadImageButton = By.id("uploadImageButton");
+    public static By successfulUploadImageMessage = By.xpath("//span[contains(text(),'Thêm hình ảnh thành công')]");
 
 }

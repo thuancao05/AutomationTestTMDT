@@ -171,7 +171,7 @@ public class common_function   {
     }
 
     //kiem tra du lieu trong bang
-    public boolean checkDataInTable(String titleColumn, String data, By columnInTable, By rowInTable) {
+    public int checkDataInTable(String titleColumn, String data, By columnInTable, By rowInTable) {
         int column = getColumnByTitle(titleColumn, columnInTable);
         int rowTotal = getTotalRowInTable(rowInTable);    //Tong so cot trong bang
         for (int i = 2; i <= rowTotal; i++) {
@@ -181,11 +181,11 @@ public class common_function   {
 
             if(data.equals(element.getText())) {
                 Assert.assertTrue(true);
-                return true;
+                return i;
             }
         }
         Assert.assertTrue(false);
-        return false;
+        return -1;
     }
 
     public void clearSession(){

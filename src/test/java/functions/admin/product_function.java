@@ -2,6 +2,7 @@ package functions.admin;
 
 
 import functions.common_function;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pages.admin.products_page;
 
@@ -21,11 +22,17 @@ public class product_function {
         commonFunction.sleep(1000);
 
     }
-
-
     // kiem tra du lieu trong bang theo ten cot
-    public void checkDataInTable(String titleName, String data){
-        commonFunction.checkDataInTable(titleName,data,productPage.columnInTable, productPage.rowInTable);
+    public int checkDataInTable(String titleName, String data){
+        int row =  commonFunction.checkDataInTable(titleName,data,productPage.columnInTable, productPage.rowInTable);
+        return row;
+    }
+    public void clickLogoutButton(){
         commonFunction.clicks(productPage.logoutButton);
+    }
+    public void clickEditButton(String titleName, String data){
+        int row = checkDataInTable(titleName, data);
+        commonFunction.clicks(By.xpath("//tbody/tr["+row+"]/td[6]/a[1]/button[1]"));
+        commonFunction.sleep(5000);
     }
 }
