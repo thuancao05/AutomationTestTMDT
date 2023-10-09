@@ -1,6 +1,6 @@
 package stepdefinitions;
 
-import functions.admin.addNewProduct_function;
+import functions.admin.add_edit_Product_function;
 import functions.admin.product_function;
 import hooks.TestContext;
 import io.cucumber.java.en.And;
@@ -9,10 +9,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class StepAddNewProduct {
-    addNewProduct_function addNewProductFunction;
+    add_edit_Product_function addEditProduct;
     product_function productFunction;
     public StepAddNewProduct(TestContext testContext){
-        addNewProductFunction = testContext.getAddNewProductFunction();
+        addEditProduct = testContext.getAddEditProductFunction();
         productFunction = testContext.getProductFunction();
     }
     @Given("user click add new product button")
@@ -23,7 +23,7 @@ public class StepAddNewProduct {
 
     @And("submit click add new product button")
     public void submitClickAddNewProductButton() {
-        addNewProductFunction.clickSubmitAddNewProductButton();
+        addEditProduct.clickSubmitAddNewProductButton();
     }
 
     @Then("the list product page display new product on top list products with name is {string}")
@@ -34,51 +34,52 @@ public class StepAddNewProduct {
 
     @When("user input product name is {string}")
     public void userInputProductNameIs(String arg0) {
-        addNewProductFunction.inputNameProduct(arg0);
+        addEditProduct.inputNameProduct(arg0);
     }
     @Then("user should see an error name message bellow textbox product name {string}")
     public void userShouldSeeAnErrorNameMessageBellowTextboxProductName(String arg0) {
-        addNewProductFunction.checkErrorName(arg0);
+        addEditProduct.checkErrorName(arg0);
     }
 
     @When("user input product price is {string}")
     public void userInputProductPriceIs(String arg0) {
-        addNewProductFunction.inputPriceProduct(arg0);
+        addEditProduct.inputPriceProduct(arg0);
     }
 
     @Then("user should see an error name message bellow textbox product price {string}")
     public void userShouldSeeAnErrorNameMessageBellowTextboxProductPrice(String arg0) {
-        addNewProductFunction.checkErrorPrice(arg0);
+        addEditProduct.checkErrorPrice(arg0);
     }
 
     @When("user input product category is {string}")
     public void userInputProductCategoryIs(String arg0) {
+        addEditProduct.inputCategoryProduct(arg0);
     }
 
     @Then("user should see an error name message bellow textbox product category {string}")
     public void userShouldSeeAnErrorNameMessageBellowTextboxProductCategory(String arg0) {
-        addNewProductFunction.checkErrorCategory(arg0);
+        addEditProduct.checkErrorCategory(arg0);
     }
 
     @When("user input product quantity is {string}")
     public void userInputProductQuantityIs(String arg0) {
-        addNewProductFunction.inputQuantityProduct(arg0);
+        addEditProduct.inputQuantityProduct(arg0);
 
     }
 
     @Then("user should see an error name message bellow textbox product quantity {string}")
     public void userShouldSeeAnErrorNameMessageBellowTextboxProductQuantity(String arg0) {
-        addNewProductFunction.checkErrorQuantity(arg0);
+        addEditProduct.checkErrorQuantity(arg0);
     }
 
     @When("user input product date of manufacture is {string}")
     public void userInputProductDateOfManufactureIs(String arg0) {
-        addNewProductFunction.inputDateProduct(arg0);
+        addEditProduct.inputDateProduct(arg0);
     }
 
     @Then("user should see an error name message bellow textbox product date of manufacture {string}")
     public void userShouldSeeAnErrorNameMessageBellowTextboxProductDateOfManufacture(String arg0) {
-        addNewProductFunction.checkErrorDateOfManufacture(arg0);
+        addEditProduct.checkErrorDateOfManufacture(arg0);
     }
 
     @When("user not select image")
@@ -88,17 +89,17 @@ public class StepAddNewProduct {
 
     @Then("user should see an error name message bellow textbox product image {string}")
     public void userShouldSeeAnErrorNameMessageBellowTextboxProductImage(String arg0) {
-        addNewProductFunction.checkErrorImage(arg0);
+        addEditProduct.checkErrorImage(arg0);
     }
 
-    @When("user input product information {string}, {string}, {string}, {string}, {string} , {string} and image")
-    public void userInputProductInformationAndImage(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5) {
-        addNewProductFunction.inputNameProduct(arg0);
-        addNewProductFunction.uploadImage();
-        addNewProductFunction.inputNameProduct(arg0);
-        addNewProductFunction.inputDescribeProduct(arg1);
-        addNewProductFunction.inputPriceProduct(arg2);
-        addNewProductFunction.inputCategoryProduct(arg3);
-        addNewProductFunction.inputQuantityProduct(arg4);
+    @When("user input product information {string}, {string}, {string}, {string}, {string} , {string} and path image {string}")
+    public void userInputProductInformationAndPathImage(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) {
+        addEditProduct.inputNameProduct(arg0);
+        addEditProduct.uploadImage(arg6);
+        addEditProduct.inputNameProduct(arg0);
+        addEditProduct.inputDescribeProduct(arg1);
+        addEditProduct.inputPriceProduct(arg2);
+        addEditProduct.inputCategoryProduct(arg3);
+        addEditProduct.inputQuantityProduct(arg4);
     }
 }

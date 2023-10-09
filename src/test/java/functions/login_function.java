@@ -14,24 +14,15 @@ public class login_function {
 
 
     public void inputEmail(String str) {
-//        WebElement element = DriverManager.getDriver().findElement(loginPage.emailInput);
-//        element.click();
-        commonFunction.sleep(3000);
-
-        commonFunction.sendKeys(loginPage.emailInput, str);
         commonFunction.sleep(1000);
-//        commonFunction.press(Keys.ENTER);
-//        commonFunction.sendKeys(loginPage.passwordInput, "1");
-//        commonFunction.sleep(1000);
-//        commonFunction.clicks(login_page.loginBtn);
+        commonFunction.sendKeys(loginPage.emailInput, str);
     }
     public void inputPassword(String str) {
         commonFunction.sendKeys(loginPage.passwordInput, str);
-        commonFunction.sleep(1000);
     }
     public void clickLoginButton( ) {
         commonFunction.clicks(login_page.loginBtn);
-        commonFunction.sleep(2000);
+        commonFunction.sleep(1000);
     }
     public void checkErrorEmail(String str){
         Assert.assertTrue(commonFunction.isDisplayed(login_page.errorEmailMessage));

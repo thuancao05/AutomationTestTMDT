@@ -6,64 +6,51 @@ Feature: Admin Add New Product
     And click login button
     Then user should see admin product page
 
-  @EmptyProductName
-  Scenario: Empty Product Name
-    Given user click edit product button with product name is "Tụ gốm 104"
-    When user input product name is ""
+#  @ChangeProductName
+#  Scenario: Change Product Name
+#    Given user click edit product button with product name is "Tụ gốm 104"
+#    When user input product name is "Tụ dán SMD"
+#    And submit click add new product button
+#    Then user should see an success update message "Cập nhật thành công !"
+#
+#  @ChangeProductDescribe
+#  Scenario: Change Product Describe
+#    Given user click edit product button with product name is "Tụ dán SMD"
+#    When user input product describe is "Cập nhật mô tả sản phẩm"
+#    And submit click add new product button
+#    Then user should see an success update message "Cập nhật thành công !"
+#
+#  @ChangeProductPrice
+#  Scenario: Change Product Price
+#    Given user click edit product button with product name is "Tụ dán SMD"
+#    When user input product price is "99999"
+#    And submit click add new product button
+#    Then user should see an success update message "Cập nhật thành công !"
+#
+#  @ChangeProductCategory
+#  Scenario: Change Product Category
+#    Given user click edit product button with product name is "Tụ dán SMD"
+#    When user input product category is "Điện trở"
+#    And submit click add new product button
+#    Then user should see an success update message "Cập nhật thành công !"
+#
+#  @ChangeProductQuantity
+#  Scenario: Change Product Quantity
+#    Given user click edit product button with product name is "Tụ dán SMD"
+#    When user input product quantity is "230"
+#    And submit click add new product button
+#    Then user should see an success update message "Cập nhật thành công !"
+#
+#  @ChangeProductDateOfManufacture
+#  Scenario: Change Product Date Of Manufacture
+#    Given user click edit product button with product name is "Tụ dán SMD"
+#    When user input product date of manufacture is "2023/10/04"
+#    And submit click add new product button
+#    Then user should see an success update message "Cập nhật thành công !"
+
+  @ChangeProductImage
+  Scenario: Change Product Image
+    Given user click edit product button with product name is "Tụ dán SMD"
+    When user change product image with path "F:\LuanVan\tusmd.jpg"
     And submit click add new product button
-    Then user should see an error name message bellow textbox product name "Bắt buộc điền tên sản phẩm có độ dài tối đa 255 ký tự"
-
-
-#  @ProductNameOver255Characters
-#  Scenario: Add New Product
-#    Given user click add new product button
-#    When user input product name is "THIS STRING IS 256 CHARACTERS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-#    And submit click add new product button
-#    Then user should see an error name message bellow textbox product name "Bắt buộc điền tên sản phẩm có độ dài tối đa 255 ký tự"
-#
-#  @EmptyProductPrice
-#  Scenario: Empty Product Price
-#    Given user click add new product button
-#    When user input product price is ""
-#    And submit click add new product button
-#    Then user should see an error name message bellow textbox product price "Bắt buộc nhập giá"
-#
-#  @EmptyProductCategory
-#  Scenario: Empty Product Category
-#    Given user click add new product button
-#    When user input product category is ""
-#    And submit click add new product button
-#    Then user should see an error name message bellow textbox product category "Bắt buộc chọn danh mục"
-#
-#  @EmptyProductQuantity
-#  Scenario: Empty Product Quantity
-#    Given user click add new product button
-#    When user input product quantity is ""
-#    And submit click add new product button
-#    Then user should see an error name message bellow textbox product quantity "Bắt buộc nhập số lượng"
-#
-#  @EmptyProductDateOfManufacture
-#  Scenario: Empty Product Date Of Manufacture
-#    Given user click add new product button
-#    When user input product date of manufacture is "2025/01/01"
-#    And submit click add new product button
-#    Then user should see an error name message bellow textbox product date of manufacture "Bắt buộc nhập ngày sản xuất hợp lệ"
-#
-#  @EmptyProductImage
-#  Scenario: Empty Product Image
-#    Given user click add new product button
-#    When user not select image
-#    And submit click add new product button
-#    Then user should see an error name message bellow textbox product image "Bắt buộc tải lên ảnh"
-#
-#  @SuccessfulAddNewProduct
-#  Scenario Outline: Add New Product
-#    Given user click add new product button
-#    When user input product information "<name>", "<describe>", "<price>", "<category>", "<quantity>" , "<date of manufacture>" and image
-#    And submit click add new product button
-#    Then the list product page display new product on top list products with name is "<name>"
-#    Examples:
-#      | name             | describe                       | price    | category | quantity | date of manufacture |
-#      | Tụ gốm 104       | sản phẩm mới nhất của cửa hàng | 150000   | Tụ điện  | 150      | 2023/10/10          |
-
-
+    Then user should see an success update message "Cập nhật thành công !"

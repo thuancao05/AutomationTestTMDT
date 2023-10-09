@@ -2,7 +2,7 @@ package pages.admin;
 
 import org.openqa.selenium.By;
 
-public class addNewProduct_page extends base_admin_page{
+public class add_edit_Product_page extends base_admin_page{
     public static By submitButton = By.id("submitButton");
     public static By nameInput = By.id("nameInput");
     public static By describeInput = By.id("describeInput");
@@ -19,5 +19,7 @@ public class addNewProduct_page extends base_admin_page{
     public static By chooseImageButton = By.id("chooseImageButton");
     public static By uploadImageButton = By.id("uploadImageButton");
     public static By successfulUploadImageMessage = By.xpath("//span[contains(text(),'Thêm hình ảnh thành công')]");
+    public static By successfulUpdateMessage = By.xpath("//span[contains(text(),'Cập nhật thành công !')]");
+    public static By categoryChange = By.xpath("//body/div[@id='app']/div[2]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[2]/div[4]/div[2]/div[1]/div[1]/span[2]");
 
 }

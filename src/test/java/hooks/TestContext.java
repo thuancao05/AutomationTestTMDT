@@ -3,7 +3,7 @@ package hooks;
 import driver.DriverFactory;
 import driver.DriverManager;
 import functions.*;
-import functions.admin.addNewProduct_function;
+import functions.admin.add_edit_Product_function;
 import functions.admin.product_function;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ThreadGuard;
@@ -19,7 +19,7 @@ public class TestContext {
     private detailProduct_function detailProductFunction;
     private cart_function cartFunction;
     private payment_function paymentFunction;
-    private addNewProduct_function addNewProductFunction;
+    private add_edit_Product_function addNewProductFunction;
     private product_function productFunction;
 
 
@@ -74,9 +74,9 @@ public class TestContext {
         return paymentFunction;
     }
 
-    public addNewProduct_function getAddNewProductFunction() {
+    public add_edit_Product_function getAddEditProductFunction() {
         if (addNewProductFunction == null) {
-            addNewProductFunction = new addNewProduct_function();
+            addNewProductFunction = new add_edit_Product_function();
         }
         return addNewProductFunction;
     }

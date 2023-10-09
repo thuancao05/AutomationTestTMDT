@@ -15,7 +15,7 @@ Feature: Admin Add New Product
 
 
   @ProductNameOver255Characters
-  Scenario: Add New Product
+  Scenario: Product Name Over 255 Characters
     Given user click add new product button
     When user input product name is "THIS STRING IS 256 CHARACTERS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     And submit click add new product button
@@ -59,11 +59,11 @@ Feature: Admin Add New Product
   @SuccessfulAddNewProduct
   Scenario Outline: Add New Product
     Given user click add new product button
-    When user input product information "<name>", "<describe>", "<price>", "<category>", "<quantity>" , "<date of manufacture>" and image
+    When user input product information "<name>", "<describe>", "<price>", "<category>", "<quantity>" , "<date of manufacture>" and path image "<Image>"
     And submit click add new product button
     Then the list product page display new product on top list products with name is "<name>"
     Examples:
-      | name             | describe                       | price    | category | quantity | date of manufacture |
-      | Tụ gốm 104       | sản phẩm mới nhất của cửa hàng | 150000   | Tụ điện  | 150      | 2023/10/10          |
+      | name             | describe                       | price    | category | quantity | date of manufacture | Image                  |
+      | Tụ gốm 104       | sản phẩm mới nhất của cửa hàng | 150000   | Tụ điện  | 150      | 2023/10/10          | F:\\LuanVan\\104pi.jpg|
 
 
