@@ -26,6 +26,6 @@ public class cart_function {
     // kiem tra du lieu trong bang theo ten cot
     public void checkDataInTable(String titleName, String data){
         commonFunction.checkDataInTable(titleName,data,cartPage.columnInTable, cartPage.rowInTable);
-        commonFunction.clearSession();
+        commonFunction.clicks(cartPage.logoutBtn);
     }
 }

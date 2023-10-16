@@ -10,8 +10,10 @@ import org.testng.annotations.Test;
                 "pages",
                 "hooks"
         },
-        plugin = {"pretty", "html:target/cucumber-html-report.html"}
-)
+        plugin = {"pretty",
+                "html:target/cucumber-reports/RunnerLogin.html",
+                "json:target/cucumber-reports/RunnerLogin.json"
+        })
 @Test
 public class RunnerLogin extends AbstractTestNGCucumberTests{
 }
