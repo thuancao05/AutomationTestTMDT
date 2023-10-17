@@ -202,6 +202,8 @@
           <suiteXmlFiles>
             <!-- Call Suite path -->
             <suiteXmlFile>src/test/resources/suites/SuiteRunner.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/suites/SuiteOrder.xml</suiteXmlFile>
+
           </suiteXmlFiles>
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>

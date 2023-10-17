@@ -19,6 +19,7 @@ public class detailProduct_function {
     }
     public void inputQuantity(String str) {
         WebElement element = DriverManager.getDriver().findElement(By.xpath("//input[@id='quantityProduct']"));
+        commonFunction.scrollToElement(By.xpath("//input[@id='quantityProduct']"));
         element.click();
         commonFunction.press(Keys.BACK_SPACE);
         commonFunction.sendKeys(detailProductPage.quantity, str);
