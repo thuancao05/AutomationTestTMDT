@@ -1,5 +1,4 @@
 package hooks;
-
 import driver.DriverFactory;
 import driver.DriverManager;
 import functions.*;
@@ -22,12 +21,10 @@ public class TestContext {
     private add_edit_Product_function addNewProductFunction;
     private product_function productFunction;
 
-
     public TestContext() {
         ThreadGuard.protect(new DriverFactory().createDriver());
         LogUtils.info("Driver in TestContext: " + getDriver());
     }
-
     public common_function getCommonFunction() {
         if (commonFunction == null) {
             commonFunction = new common_function();

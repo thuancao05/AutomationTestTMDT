@@ -31,15 +31,14 @@ Feature: Admin Create New Product
   @EmptyProductCategory
   Scenario: Empty Product Category
     Given user click add new product button
-    When user input product category is ""
-    And submit click add new product button
+    When submit click add new product button
     Then user should see an error name message bellow textbox product category "Bắt buộc chọn danh mục"
 
   @EmptyProductQuantity
   Scenario: Empty Product Quantity
     Given user click add new product button
     When user input product quantity is ""
-    And submit click add new product button
+    When submit click add new product button
     Then user should see an error name message bellow textbox product quantity "Bắt buộc nhập số lượng"
 
   @EmptyProductDateOfManufacture

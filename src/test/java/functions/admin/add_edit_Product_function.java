@@ -153,9 +153,6 @@ public class add_edit_Product_function {
         rb.keyPress(KeyEvent.VK_CONTROL);
         rb.keyPress(KeyEvent.VK_V);
 
-        // Xác nhận Control V trên
-        rb.keyRelease(KeyEvent.VK_CONTROL);
-        rb.keyRelease(KeyEvent.VK_V);
 
         commonFunction.sleep(1000);
 
