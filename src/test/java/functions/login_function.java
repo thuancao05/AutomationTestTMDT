@@ -1,6 +1,4 @@
 package functions;
-
-
 import driver.DriverManager;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +10,6 @@ public class login_function {
     public login_page loginPage = new login_page();
     public common_function commonFunction = new common_function();
 
-
     public void inputEmail(String str) {
         commonFunction.sleep(1000);
         commonFunction.sendKeys(loginPage.emailInput, str);
@@ -21,24 +18,19 @@ public class login_function {
         commonFunction.sendKeys(loginPage.passwordInput, str);
     }
     public void clickLoginButton( ) {
-        commonFunction.clicks(login_page.loginBtn);
+        commonFunction.clicks(loginPage.loginBtn);
         commonFunction.sleep(1000);
     }
     public void checkErrorEmail(String str){
-        Assert.assertTrue(commonFunction.isDisplayed(login_page.errorEmailMessage));
-        Assert.assertEquals(str, commonFunction.getValue(login_page.errorEmailMessage));
-
+        Assert.assertTrue(commonFunction.isDisplayed(loginPage.errorEmailMessage));
+        Assert.assertEquals(str, commonFunction.getValue(loginPage.errorEmailMessage));
     }
     public void checkErrorPassword(String str){
-        Assert.assertTrue(commonFunction.isDisplayed(login_page.errorPasswordMessage));
-        Assert.assertEquals(str, commonFunction.getValue(login_page.errorPasswordMessage));
+        Assert.assertTrue(commonFunction.isDisplayed(loginPage.errorPasswordMessage));
+        Assert.assertEquals(str, commonFunction.getValue(loginPage.errorPasswordMessage));
     }
     public void checkErrorLogin(String str){
-        Assert.assertTrue(commonFunction.isDisplayed(login_page.errorAuthenticationMessage));
-        Assert.assertEquals(str, commonFunction.getValue(login_page.errorAuthenticationMessage));
-    }
-    public void clickRegisterButton() {
-        commonFunction.sleep(1000);
-        commonFunction.clicks(login_page.registerBtn);
+        Assert.assertTrue(commonFunction.isDisplayed(loginPage.errorAuthenticationMessage));
+        Assert.assertEquals(str, commonFunction.getValue(loginPage.errorAuthenticationMessage));
     }
 }

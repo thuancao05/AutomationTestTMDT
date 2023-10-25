@@ -202,6 +202,7 @@
           <suiteXmlFiles>
             <!-- Call Suite path -->
             <suiteXmlFile>src/test/resources/suites/SuiteRunner.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/suites/SuiteCRUDProduct.xml</suiteXmlFile>
             <suiteXmlFile>src/test/resources/suites/SuiteOrder.xml</suiteXmlFile>
 
           </suiteXmlFiles>
@@ -221,7 +222,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <projectName>CucumberTestNG022023</projectName>
+              <projectName>TMDT</projectName>
               <skip>false</skip>
               <outputDirectory>reports/CucumberReports/cucumber-reports</outputDirectory>
               <inputDirectory>target/cucumber-reports</inputDirectory>
