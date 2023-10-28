@@ -6,6 +6,8 @@
             <class name="runners.RunnerCreateProduct"/>
             <class name="runners.RunnerEditProduct"/>
             <class name="runners.RunnerDeleteProduct"/>
+
+
         </classes>
     </test>
 </suite>
