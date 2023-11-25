@@ -1,5 +1,4 @@
 package functions;
-
 import driver.DriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -13,22 +12,18 @@ import java.util.Collections;
 import java.util.List;
 
 import static driver.DriverManager.getDriver;
-
 public class common_function   {
     private WebDriverWait wait;
     public WebDriverWait getWait() {
         return wait;
     }
     Actions actions = new Actions(getDriver());
-
     public static WebElement getWebElement(By by) {
         return DriverManager.getDriver().findElement(by);
     }
-
     public static List<WebElement> getWebElements(By by) {
         return DriverManager.getDriver().findElements(by);
     }
-
     public void clicks(By by) {
         scrollToElement(by);
         JavascriptExecutor executor = (JavascriptExecutor) getDriver();

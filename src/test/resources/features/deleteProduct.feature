@@ -1,4 +1,4 @@
-Feature: Admin Add New Product
+Feature: Admin DeleteProduct
 
   Background: Login With Admin Account
     Given user navigate to Login page "http://localhost:5173/login"

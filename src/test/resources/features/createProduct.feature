@@ -17,7 +17,7 @@ Feature: Admin Create New Product
   @ProductNameOver255Characters
   Scenario: Product Name Over 255 Characters
     Given user click add new product button
-    When user input product name is "THIS STRING IS 256 CHARACTERS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    When user input product name is "THIS STRING IS 256 CHARACTERS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     And submit click add new product button
     Then user should see an error name message bellow textbox product name "Bắt buộc điền tên sản phẩm có độ dài tối đa 255 ký tự"
 
@@ -56,7 +56,7 @@ Feature: Admin Create New Product
     Then user should see an error name message bellow textbox product image "Bắt buộc tải lên ảnh"
 
   @SuccessfulAddNewProduct
-  Scenario Outline: Add New Product
+  Scenario Outline: Create New Product
     Given user click add new product button
     When user input product information "<name>", "<describe>", "<price>", "<category>", "<quantity>" , "<date of manufacture>" and path image "<Image>"
     And submit click add new product button
@@ -64,5 +64,4 @@ Feature: Admin Create New Product
     Examples:
       | name             | describe                       | price    | category | quantity | date of manufacture | Image                  |
       | Tụ gốm 104       | sản phẩm mới nhất của cửa hàng | 150000   | Tụ điện  | 150      | 2023/10/10          | F:\\LuanVan\\104pi.jpg|
-
 

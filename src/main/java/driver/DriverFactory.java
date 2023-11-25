@@ -24,6 +24,10 @@ public class DriverFactory {
         WebDriver driver;
         System.out.println("Launching browser...");
         WebDriverManager.chromedriver().setup();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         return driver;
