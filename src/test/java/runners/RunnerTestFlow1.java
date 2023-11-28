@@ -4,8 +4,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.Test;
 
 @CucumberOptions(
-        features = "src/test/resources/features/order.feature",
-        tags = "@SuccessfulOrder",
+        features = "src/test/resources/features/testFlow1.feature",
         glue = {"stepdefinitions",
                 "functions",
                 "pages",
@@ -16,5 +15,5 @@ import org.testng.annotations.Test;
                 "json:target/cucumber-reports/RunnerOrderFlow1.json"
         })
 @Test
-public class RunnerOrderFlow1 extends AbstractTestNGCucumberTests{
+public class RunnerTestFlow1 extends AbstractTestNGCucumberTests{
 }

@@ -1,4 +1,4 @@
-Feature: Fow Order 2
+Feature: Test Flow 2
 
   Background: Login And Order
     Given user navigate to Login page "http://localhost:5173/login"
@@ -6,8 +6,15 @@ Feature: Fow Order 2
     And select product "điện trở" to order
     Then user redirect to payment page "http://localhost:5173/cart/payment"
 
-  @SuccessfulOrder2
-  Scenario Outline: Successful Fow Order 2
+  @EmptyAddress
+  Scenario: Empty Address
+    Given user stay at payment page
+    When user input address is ""
+    And click submit button
+    Then user should see an error address message bellow textbox address "Bắt buộc chọn địa chỉ"
+
+  @SuccessfulTestFlow2
+  Scenario Outline: Successful Test Flow 2
     Given select product "đồng hồ" to order
     When user input address is "<address>", "<city>", "<district>", "<ward>", "<note>"
     And click submit button

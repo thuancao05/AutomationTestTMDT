@@ -203,7 +203,7 @@
             <!-- Call Suite path -->
             <suiteXmlFile>src/test/resources/suites/SuiteRunner.xml</suiteXmlFile>
             <suiteXmlFile>src/test/resources/suites/SuiteCRUDProduct.xml</suiteXmlFile>
-            <suiteXmlFile>src/test/resources/suites/SuiteOrder.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/suites/SuiteTestFlow.xml</suiteXmlFile>
 
           </suiteXmlFiles>
           <testFailureIgnore>true</testFailureIgnore>
