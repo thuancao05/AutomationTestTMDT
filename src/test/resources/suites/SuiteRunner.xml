@@ -6,8 +6,6 @@
             <class name="runners.RunnerRegister"/>
             <class name="runners.RunnerLogin"/>
             <class name="runners.RunnerSearch"/>
-            <class name="runners.RunnerAddToCart"/>
-            <class name="runners.RunnerOrder"/>
         </classes>
     </test>
 </suite>

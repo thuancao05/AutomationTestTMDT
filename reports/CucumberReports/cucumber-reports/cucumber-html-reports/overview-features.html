@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                143,
-                22,
-                119,
+                202,
+                2,
+                0,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 284) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 204) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                19,
-                22
+                29,
+                2
             ],
             backgroundColor: [
                 "#00B000",
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 41) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 31) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   3,
-                   7
+                   6,
+                   2
                ],
                backgroundColor: [
                 "#00B000",
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 8) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>TMDT</td>
         <td>1</td>
-      <td>29 Nov 2023, 08:25</td>
+      <td>04 Dec 2023, 22:24</td>
     </tr>
   </tbody>
 </table>
@@ -325,7 +325,75 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_2865515300.html">Add Product To Cart</a></td>
+        <td class="tagname"><a href="report-feature_2716132006.html">Admin Create New Product</a></td>
+
+        <td      class="passed"    >63</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">63</td>
+
+        <td  class="passed"    >8</td>
+        <td >0</td>
+        <td class="total">8</td>
+
+        <td class="duration" data-value="70968286100">1:10.968</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_1_2637572631.html">Admin DeleteProduct</a></td>
+
+        <td      class="passed"    >8</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">8</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="5535600100">5.535</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_2_1708112600.html">Admin Edit Product</a></td>
+
+        <td      class="passed"    >56</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">56</td>
+
+        <td  class="passed"    >7</td>
+        <td >0</td>
+        <td class="total">7</td>
+
+        <td class="duration" data-value="58699170300">58.699</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_3_965572540.html">Login</a></td>
+
+        <td      class="passed"    >16</td>
+        <td      class="failed"    >1</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">17</td>
+
+        <td  class="passed"    >3</td>
+        <td  class="failed"    >1</td>
+        <td class="total">4</td>
+
+        <td class="duration" data-value="20573529900">20.573</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_4_2155484580.html">Test Flow 1</a></td>
 
         <td      class="passed"    >16</td>
         <td >0</td>
@@ -338,130 +406,28 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="17962307800">17.962</td>
+        <td class="duration" data-value="30495845400">30.495</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_1_2716132006.html">Admin Create New Product</a></td>
+        <td class="tagname"><a href="report-feature_5_348030117.html">Test Flow 2</a></td>
 
-        <td      class="passed"    >8</td>
-        <td      class="failed"    >8</td>
-        <td     class="skipped"   >47</td>
+        <td      class="passed"    >16</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">63</td>
-
-        <td >0</td>
-        <td  class="failed"    >8</td>
-        <td class="total">8</td>
-
-        <td class="duration" data-value="22755579200">22.755</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_2_2637572631.html">Admin DeleteProduct</a></td>
-
-        <td      class="passed"    >1</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >6</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">8</td>
-
-        <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
-
-        <td class="duration" data-value="2735903900">2.735</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_3_1708112600.html">Admin Edit Product</a></td>
-
-        <td      class="passed"    >7</td>
-        <td      class="failed"    >7</td>
-        <td     class="skipped"   >42</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">56</td>
-
-        <td >0</td>
-        <td  class="failed"    >7</td>
-        <td class="total">7</td>
-
-        <td class="duration" data-value="20065585400">20.065</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_4_965572540.html">Login</a></td>
-
-        <td      class="passed"    >17</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">17</td>
-
-        <td  class="passed"    >4</td>
-        <td >0</td>
-        <td class="total">4</td>
-
-        <td class="duration" data-value="21002530100">21.002</td>
-        <td class="passed">Passed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_5_3714669217.html">Order</a></td>
-
-        <td      class="passed"    >63</td>
-        <td      class="failed"    >1</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">64</td>
-
-        <td  class="passed"    >7</td>
-        <td  class="failed"    >1</td>
-        <td class="total">8</td>
-
-        <td class="duration" data-value="111397910600">1:51.397</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_6_2155484580.html">Test Flow 1</a></td>
-
-        <td      class="passed"    >2</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >12</td>
         <td >0</td>
         <td >0</td>
         <td class="total">16</td>
 
+        <td  class="passed"    >2</td>
         <td >0</td>
-        <td  class="failed"    >2</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="5860158800">5.860</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="34530894200">34.530</td>
+        <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_7_348030117.html">Test Flow 2</a></td>
-
-        <td      class="passed"    >2</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >12</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">16</td>
-
-        <td >0</td>
-        <td  class="failed"    >2</td>
-        <td class="total">2</td>
-
-        <td class="duration" data-value="5706449600">5.706</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_8_4196646110.html">Register</a></td>
+        <td class="tagname"><a href="report-feature_6_4196646110.html">Register</a></td>
 
         <td      class="passed"    >23</td>
         <td      class="failed"    >1</td>
@@ -474,11 +440,11 @@ $(document).ready(function() {
         <td  class="failed"    >1</td>
         <td class="total">6</td>
 
-        <td class="duration" data-value="36144654600">36.144</td>
+        <td class="duration" data-value="31076955300">31.076</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_9_2075728867.html">Search</a></td>
+        <td class="tagname"><a href="report-feature_7_2075728867.html">Search</a></td>
 
         <td      class="passed"    >4</td>
         <td >0</td>
@@ -491,7 +457,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="6726488700">6.726</td>
+        <td class="duration" data-value="6624641100">6.624</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -499,33 +465,33 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>143</td>
-      <td>22</td>
-      <td>119</td>
+      <td>202</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
-      <td>284</td>
+      <td>0</td>
+      <td>204</td>
 
-      <td>19</td>
-      <td>22</td>
-      <td>41</td>
+      <td>29</td>
+      <td>2</td>
+      <td>31</td>
 
-      <td class="duration">4:10.357</td>
-      <td>10</td>
+      <td class="duration">4:18.504</td>
+      <td>8</td>
     </tr>
     <tr>
       <td></td>
-      <td>50.35%</td>
-      <td>7.75%</td>
-      <td>41.90%</td>
+      <td>99.02%</td>
+      <td>0.98%</td>
       <td>0.00%</td>
       <td>0.00%</td>
+      <td>0.00%</td>
       <td></td>
-      <td>46.34%</td>
-      <td>53.66%</td>
+      <td>93.55%</td>
+      <td>6.45%</td>
       <td></td>
       <td></td>
-      <td>30.00%</td>
+      <td>75.00%</td>
     </tr>
   </tfoot>
 </table>

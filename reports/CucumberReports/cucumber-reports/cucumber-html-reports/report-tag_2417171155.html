@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>TMDT</td>
         <td>1</td>
-      <td>29 Nov 2023, 08:25</td>
+      <td>04 Dec 2023, 22:24</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@ErrorEmail</td>
-          <td      class="passed"    >8</td>
-          <td >0</td>
+          <td      class="passed"    >7</td>
+          <td      class="failed"    >1</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">8</td>
 
-          <td  class="passed"    >2</td>
-          <td >0</td>
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >1</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="9571972700">9.571</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="9139782800">9.139</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_4_965572540.html">Login</a>
+      <a href="report-feature_3_965572540.html">Login</a>
     </div>
 
 
@@ -183,12 +183,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">4.248</span>
+  <span class="lead-duration duration">4.189</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
   <span class="name">Error Email</span>
 
@@ -199,7 +199,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
@@ -238,9 +238,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -250,7 +250,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -258,7 +258,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">user navigate to Login page <span class="argument">&quot;http://localhost:5173/login&quot;</span></span>
 
-  <span class="lead-duration duration">1.915</span>
+  <span class="lead-duration duration">1.862</span>
 
 </div>
 
@@ -349,7 +349,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user enter email <span class="argument">&quot;abcgmail.com&quot;</span> and password: <span class="argument">&quot;123&quot;</span></span>
 
-  <span class="lead-duration duration">1.237</span>
+  <span class="lead-duration duration">1.226</span>
 
 </div>
 
@@ -418,7 +418,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">hooks.CucumberHooks.afterStep(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
@@ -440,7 +440,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">click login button</span>
 
-  <span class="lead-duration duration">1.048</span>
+  <span class="lead-duration duration">1.046</span>
 
 </div>
 
@@ -527,11 +527,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">user should see an error email message <span class="argument">&quot;B&#7855;t bu&#7897;c nh&#7853;p email &#273;&uacute;ng &#273;&#7883;nh d&#7841;ng !&quot;</span></span>
+  <span class="name">user should see an error email message <span class="argument">&quot;B&#7855;t bu&#7897;c nh&#7853;p email &#273;&uacute;ng &#273;&#7883;nh d&#7841;ng !!&quot;</span></span>
 
-  <span class="lead-duration duration">0.047</span>
+  <span class="lead-duration duration">0.054</span>
 
 </div>
 
@@ -572,6 +572,27 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#msg-11">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details ">
+        <pre>java.lang.AssertionError: expected [B&#7855;t bu&#7897;c nh&#7853;p email &#273;&uacute;ng &#273;&#7883;nh d&#7841;ng !] but found [B&#7855;t bu&#7897;c nh&#7853;p email &#273;&uacute;ng &#273;&#7883;nh d&#7841;ng !!]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at functions.login_function.checkErrorEmail(login_function.java:26)
+	at stepdefinitions.CommonSteps.userShouldSeeAnErrorEmailMessage(CommonSteps.java:25)
+	at &#10045;.user should see an error email message &quot;B&#7855;t bu&#7897;c nh&#7853;p email &#273;&uacute;ng &#273;&#7883;nh d&#7841;ng !!&quot;(file:///F:/ThucTap/AutomationTestTMDT/src/test/resources/features/login.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -582,7 +603,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -594,7 +615,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-11" class="inner-level collapse collapsable-details ">
+    <div id="after-12" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
@@ -622,7 +643,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-13">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -634,13 +655,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-12" class="inner-level collapse collapsable-details ">
+    <div id="after-13" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">hooks.CucumberHooks.afterScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.669</span>
+  <span class="lead-duration duration">0.694</span>
 
           </div>
 
@@ -661,7 +682,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_8_4196646110.html">Register</a>
+      <a href="report-feature_6_4196646110.html">Register</a>
     </div>
 
 
@@ -671,10 +692,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">5.323</span>
+  <span class="lead-duration duration">4.950</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-14">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -687,11 +708,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-13" class="collapse collapsable-details ">
+  <div id="element-14" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-14">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-15">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -703,7 +724,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-14" class="inner-level collapse collapsable-details ">
+    <div id="before-15" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -726,7 +747,7 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-16">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -738,7 +759,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-15" class="inner-level collapse collapsable-details ">
+  <div id="steps-16" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -746,14 +767,14 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">user navigate to register page <span class="argument">&quot;http://localhost:5173/register&quot;</span></span>
 
-  <span class="lead-duration duration">2.785</span>
+  <span class="lead-duration duration">2.410</span>
 
 </div>
 
 
 
   <div class="inner-level hooks-step-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-16">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-17">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -765,7 +786,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-16" class="inner-level collapse collapsable-details ">
+    <div id="before-17" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -797,7 +818,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-17">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-18">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -809,7 +830,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-17" class="inner-level collapse collapsable-details ">
+    <div id="after-18" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
@@ -837,14 +858,14 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user enter name: <span class="argument">&quot;Hu&#7923;nh V&#259;n B&aacute;&quot;</span>, phone: <span class="argument">&quot;0562147852&quot;</span> email <span class="argument">&quot;&quot;</span> and password: <span class="argument">&quot;123&quot;</span></span>
 
-  <span class="lead-duration duration">0.406</span>
+  <span class="lead-duration duration">0.417</span>
 
 </div>
 
 
 
   <div class="inner-level hooks-step-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-18">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-19">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -856,7 +877,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-18" class="inner-level collapse collapsable-details ">
+    <div id="before-19" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -888,7 +909,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-19">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-20">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -900,7 +921,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-19" class="inner-level collapse collapsable-details ">
+    <div id="after-20" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
@@ -928,14 +949,14 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">click register button</span>
 
-  <span class="lead-duration duration">2.078</span>
+  <span class="lead-duration duration">2.072</span>
 
 </div>
 
 
 
   <div class="inner-level hooks-step-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-20">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-21">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -947,7 +968,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-20" class="inner-level collapse collapsable-details ">
+    <div id="before-21" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -979,7 +1000,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-21">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-22">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -991,7 +1012,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-21" class="inner-level collapse collapsable-details ">
+    <div id="after-22" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
@@ -1019,14 +1040,14 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">user should see an error email message <span class="argument">&quot;B&#7855;t bu&#7897;c &#273;i&#7873;n email &#273;&uacute;ng &#273;&#7883;nh d&#7841;ng&quot;</span></span>
 
-  <span class="lead-duration duration">0.052</span>
+  <span class="lead-duration duration">0.049</span>
 
 </div>
 
 
 
   <div class="inner-level hooks-step-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-22">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-23">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1038,7 +1059,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-22" class="inner-level collapse collapsable-details ">
+    <div id="before-23" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -1070,7 +1091,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-23">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-24">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1082,7 +1103,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-23" class="inner-level collapse collapsable-details ">
+    <div id="after-24" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
@@ -1110,7 +1131,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-24">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-25">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1122,13 +1143,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-24" class="inner-level collapse collapsable-details ">
+    <div id="after-25" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">hooks.CucumberHooks.afterScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.646</span>
+  <span class="lead-duration duration">0.691</span>
 
           </div>
 
