@@ -23,11 +23,11 @@ public class login_function {
     }
     public void checkErrorEmail(String str){
         Assert.assertTrue(commonFunction.isDisplayed(loginPage.errorEmailMessage));
-        Assert.assertEquals(str, commonFunction.getValue(loginPage.errorEmailMessage));
+        Assert.assertEquals(commonFunction.getValue(loginPage.errorEmailMessage), str);
     }
     public void checkErrorPassword(String str){
         Assert.assertTrue(commonFunction.isDisplayed(loginPage.errorPasswordMessage));
-        Assert.assertEquals(str, commonFunction.getValue(loginPage.errorPasswordMessage));
+        Assert.assertEquals(commonFunction.getValue(loginPage.errorPasswordMessage), str);
     }
     public void checkErrorLogin(String str){
         Assert.assertTrue(commonFunction.isDisplayed(loginPage.errorAuthenticationMessage));

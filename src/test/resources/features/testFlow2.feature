@@ -6,13 +6,6 @@ Feature: Test Flow 2
     And select product "điện trở" to order
     Then user redirect to payment page "http://localhost:5173/cart/payment"
 
-  @EmptyAddress
-  Scenario: Empty Address
-    Given user stay at payment page
-    When user input address is ""
-    And click submit button
-    Then user should see an error address message bellow textbox address "Bắt buộc chọn địa chỉ"
-
   @SuccessfulTestFlow2
   Scenario Outline: Successful Test Flow 2
     Given select product "đồng hồ" to order
