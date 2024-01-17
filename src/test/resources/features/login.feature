@@ -4,10 +4,10 @@ Feature: Login
     Given user navigate to Login page "http://localhost:5173/login"
     When user enter email "<email>" and password: "<password>"
     And click login button
-    Then user should see an error email message "Bắt buộc nhập email đúng định dạng !!"
+    Then user should see an error email message "Bắt buộc nhập email đúng định dạng !"
     Examples:
       | email        | password |
-      | abcgmail.com | 123    |
+      | abcgmail.com | 123     |
 
   @ErrorPassword
   Scenario Outline: Error Password

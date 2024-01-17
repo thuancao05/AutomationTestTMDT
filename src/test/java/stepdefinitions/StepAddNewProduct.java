@@ -95,7 +95,7 @@ public class StepAddNewProduct {
     @When("user input product information {string}, {string}, {string}, {string}, {string} , {string} and path image {string}")
     public void userInputProductInformationAndPathImage(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) {
         addEditProduct.inputNameProduct(arg0);
-        addEditProduct.uploadImage(arg6);
+//        addEditProduct.uploadImage(arg6);
         addEditProduct.inputNameProduct(arg0);
         addEditProduct.inputDescribeProduct(arg1);
         addEditProduct.inputPriceProduct(arg2);
